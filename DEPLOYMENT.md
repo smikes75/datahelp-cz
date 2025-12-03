@@ -2,7 +2,7 @@
 
 This project supports two separate builds for different domains:
 - **CZ version** (`datahelp.cz`) - Czech language only
-- **EU version** (`datahelp.eu`) - English, German, Italian
+- **EU version** (`datahelp.cz`) - English, German, Italian
 
 ## Build Commands
 
@@ -52,14 +52,14 @@ npm run build:all
    - **Environment variables:** Copy from `.env.cz`
 4. Set custom domain to `datahelp.cz`
 
-#### For EU Version (datahelp.eu)
+#### For EU Version (datahelp.cz)
 1. Create another new site on Netlify
 2. Connect to the same repository
 3. Configure build settings:
    - **Build command:** `npm run build:eu`
    - **Publish directory:** `dist-eu`
    - **Environment variables:** Copy from `.env.eu`
-4. Set custom domain to `datahelp.eu`
+4. Set custom domain to `datahelp.cz`
 
 ### Vercel
 
@@ -80,7 +80,7 @@ Similar setup to Netlify:
 - Languages: English, German, Italian
 - Homepage: Contact form (all devices)
 - Contact info: International format
-- Domain: datahelp.eu
+- Domain: datahelp.cz
 
 ## Testing Locally
 

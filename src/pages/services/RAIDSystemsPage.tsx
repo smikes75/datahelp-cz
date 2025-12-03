@@ -33,10 +33,10 @@ function RAIDSystemsPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <SEO 
-        title={`${t('services.raid.title')} | DataHelp.eu`}
+        title={`${t('services.raid.title')} | DataHelp.cz`}
         description={t('services.raid.desc')}
         keywords={t('services.raid.keywords.recovery')}
-        canonical="https://datahelp.eu/services/raid-systems"
+        canonical="https://datahelp.cz/services/raid-systems"
         ogImage="/images/backgrounds/raid-recovery.webp"
       />
       <div className="bg-primary text-white py-16">

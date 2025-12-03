@@ -5,8 +5,8 @@ export function SchemaOrg() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "DataHelp.eu",
-    "image": "https://datahelp.eu/DataHelp.eu.png",
+    "name": "DataHelp.cz",
+    "image": "https://datahelp.cz/DataHelp.cz.png",
     "description": "Profesionální obnova dat z poškozených médií - HDD, SSD, RAID systémy. Více než 20 let zkušeností.",
     "address": {
       "@type": "PostalAddress",
@@ -20,7 +20,7 @@ export function SchemaOrg() {
       "latitude": 50.0922,
       "longitude": 14.4507
     },
-    "url": "https://datahelp.eu",
+    "url": "https://datahelp.cz",
     "telephone": "+420-608-966-985",
     "priceRange": "KčKč",
     "openingHoursSpecification": {

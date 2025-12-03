@@ -24,8 +24,8 @@ function TechnologyPage() {
     "description": t('techPage.subtitle'),
     "author": {
       "@type": "Organization",
-      "name": "DataHelp.eu",
-      "url": "https://datahelp.eu"
+      "name": "DataHelp.cz",
+      "url": "https://datahelp.cz"
     },
     "articleBody": t('techPage.ourTechnology.description')
   };
@@ -99,10 +99,10 @@ function TechnologyPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <SEO 
-        title={`${t('techPage.title')} | DataHelp.eu`}
+        title={`${t('techPage.title')} | DataHelp.cz`}
         description={t('techPage.subtitle')}
         keywords="data recovery technology, clean room, data recovery tools, professional equipment"
-        canonical={`https://datahelp.eu/technology`}
+        canonical={`https://datahelp.cz/technology`}
         schema={schema}
       />
 

@@ -10,8 +10,8 @@ export function Logo() {
     <div className="flex items-center">
       <Link to="/" onClick={handleLogoClick} className="flex items-center header-logo">
         <img
-          src="/DataHelp.eu.svg"
-          alt="DataHelp.eu"
+          src="/DataHelp.cz.svg"
+          alt="DataHelp.cz"
           className="h-12 md:h-[3.72rem] w-auto"
         />
       </Link>

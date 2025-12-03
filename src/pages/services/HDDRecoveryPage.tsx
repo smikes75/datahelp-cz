@@ -34,10 +34,10 @@ function HDDRecoveryPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <SEO 
-        title={`${t('services.hdd.title')} | DataHelp.eu`}
+        title={`${t('services.hdd.title')} | DataHelp.cz`}
         description={t('services.hdd.desc')}
         keywords={t('services.hdd.keywords.recovery')}
-        canonical="https://datahelp.eu/services/hdd-recovery"
+        canonical="https://datahelp.cz/services/hdd-recovery"
         ogImage="/images/backgrounds/hdd-recovery.webp"
       />
       <div className="bg-primary text-white py-16">

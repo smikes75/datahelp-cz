@@ -37,13 +37,13 @@ function BlogPostPage() {
     return <Navigate to="/blog" replace />;
   }
 
-  const canonicalUrl = `https://datahelp.eu/blog/${post.slug}`;
+  const canonicalUrl = `https://datahelp.cz/blog/${post.slug}`;
   const articleSchema = generateArticleSchema(post, canonicalUrl);
 
   return (
     <div className="min-h-screen bg-gray-50">
       <SEO
-        title={`${post.title} | DataHelp.eu Blog`}
+        title={`${post.title} | DataHelp.cz Blog`}
         description={post.seoDescription}
         keywords={post.tags.join(', ')}
         canonical={canonicalUrl}

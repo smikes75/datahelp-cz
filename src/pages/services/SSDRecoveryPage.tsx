@@ -33,10 +33,10 @@ function SSDRecoveryPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <SEO 
-        title={`${t('services.ssd.title')} | DataHelp.eu`}
+        title={`${t('services.ssd.title')} | DataHelp.cz`}
         description={t('services.ssd.desc')}
         keywords={t('services.ssd.keywords.recovery')}
-        canonical="https://datahelp.eu/services/ssd-recovery"
+        canonical="https://datahelp.cz/services/ssd-recovery"
         ogImage="/images/backgrounds/ssd-recovery.webp"
       />
       <div className="bg-primary text-white py-16">

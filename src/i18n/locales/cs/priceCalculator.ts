@@ -93,7 +93,7 @@ export const priceCalculator = {
   },
   
   whyChoose: {
-    title: 'Proč si vybrat DataHelp.eu?',
+    title: 'Proč si vybrat DataHelp.cz?',
     noDataNoPayment: {
       title: 'Žádná data = žádná platba',
       description: 'Platíte pouze za úspěšně zachráněná data'

@@ -1,4 +1,4 @@
-# Design System - DataHelp.eu
+# Design System - DataHelp.cz
 
 Kompletní přehled grafického stylu a design systému pro redesign dalších webů.
 
@@ -533,5 +533,5 @@ font-weight: 500 (medium)
 ---
 
 **Datum:** 2025-11-04
-**Projekt:** DataHelp.eu
+**Projekt:** DataHelp.cz
 **Verze:** 1.0

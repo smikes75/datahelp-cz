@@ -13,9 +13,9 @@ export interface SEOConfig {
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "DataHelp.eu",
-  "url": "https://datahelp.eu",
-  "logo": "https://datahelp.eu/DataHelp.eu.svg",
+  "name": "DataHelp.cz",
+  "url": "https://datahelp.cz",
+  "logo": "https://datahelp.cz/DataHelp.cz.svg",
   "foundingDate": "1998",
   "description": "Profesionální záchrana dat s více než 25 lety zkušeností - HDD, SSD, RAID recovery. Platíte pouze za úspěšně zachráněná data.",
   "address": {
@@ -78,7 +78,7 @@ const organizationSchema = {
 // Enhanced SEO configurations for each page
 const seoConfigs: Record<string, SEOConfig> = {
   home: {
-    title: "DataHelp.eu - Profesionální záchrana dat | HDD, SSD, RAID obnova",
+    title: "DataHelp.cz - Profesionální záchrana dat | HDD, SSD, RAID obnova",
     description: "Profesionální služby záchrany dat s více než 25 lety zkušeností. Specializujeme se na obnovu HDD, SSD a RAID systémů. Platíte pouze za úspěšně zachráněná data. Diagnostika a svoz zdarma.",
     keywords: "záchrana dat, obnova dat, HDD recovery, SSD recovery, RAID recovery, profesionální záchrana dat Praha, oprava pevného disku, obnova smazaných dat, diagnostika zdarma, svoz zdarma",
     schema: {
@@ -90,7 +90,7 @@ const seoConfigs: Record<string, SEOConfig> = {
     }
   },
   services: {
-    title: "Služby záchrany dat | HDD, SSD, RAID, NAS obnova | DataHelp.eu",
+    title: "Služby záchrany dat | HDD, SSD, RAID, NAS obnova | DataHelp.cz",
     description: "Komplexní služby záchrany dat pro HDD, SSD, RAID systémy a firemní řešení. Specializovaná laboratoř s více než 25 lety zkušeností. Diagnostika a svoz zdarma. Platíte jen za úspěch.",
     keywords: "služby záchrany dat, hdd obnova, ssd recovery, raid systémy, nas recovery, firemní řešení, laboratoř záchrany dat, diagnostika zdarma, svoz zdarma Praha",
     schema: {
@@ -125,7 +125,7 @@ const seoConfigs: Record<string, SEOConfig> = {
     }
   },
   about: {
-    title: "O nás | 25+ let zkušeností v záchraně dat | DataHelp.eu",
+    title: "O nás | 25+ let zkušeností v záchraně dat | DataHelp.cz",
     description: "Profesionální záchrana dat s více než 25 lety zkušeností od roku 1998. Specializovaná laboratoř v Praze, certifikovaní technici a nejmodernější technologie pro obnovu dat.",
     keywords: "o datahelp, zkušenosti obnova dat, expertní tým, laboratoř pro záchranu dat Praha, certifikovaní specialisté, bezpečnost dat, založení 1998",
     schema: {
@@ -135,7 +135,7 @@ const seoConfigs: Record<string, SEOConfig> = {
     }
   },
   contact: {
-    title: "Kontakt | NONSTOP pohotovost | Záchrana dat Praha 8 Karlín | DataHelp.eu",
+    title: "Kontakt | NONSTOP pohotovost | Záchrana dat Praha 8 Karlín | DataHelp.cz",
     description: "Kontaktujte naše experty na záchranu dat. NONSTOP pohotovostní služba po dohodě. Profesionální laboratoř záchrany dat v Praze 8 - Karlín, Jirsíkova 541/1.",
     keywords: "kontakt datahelp, záchrana dat kontakt, pohotovost záchrana dat, laboratoř Praha, záchrana dat Praha 8, data recovery Karlín, obnova dat Praha centrum, nonstop služba",
     schema: {
@@ -157,7 +157,7 @@ const seoConfigs: Record<string, SEOConfig> = {
     }
   },
   faq: {
-    title: "Často kladené otázky | FAQ záchrana dat | DataHelp.eu",
+    title: "Často kladené otázky | FAQ záchrana dat | DataHelp.cz",
     description: "Odpovědi na nejčastější otázky o službách záchrany dat. Zjistěte více o našem procesu, cenách a bezpečnostních opatřeních.",
     keywords: "faq záchrana dat, otázky obnova dat, jak funguje záchrana dat, bezpečnost dat",
     schema: {
@@ -208,13 +208,13 @@ const seoConfigs: Record<string, SEOConfig> = {
     }
   },
   blog: {
-    title: "Blog | Novinky a tipy o záchraně dat | DataHelp.eu",
+    title: "Blog | Novinky a tipy o záchraně dat | DataHelp.cz",
     description: "Aktuální články, tipy a novinky ze světa záchrany dat. Průvodce, case studies a odborné rady od profesionálů.",
     keywords: "záchrana dat blog, data recovery články, tipy obnova dat, průvodce záchrana dat, case studies",
     schema: {
       "@context": "https://schema.org",
       "@type": "Blog",
-      "name": "DataHelp.eu Blog",
+      "name": "DataHelp.cz Blog",
       "description": "Blog o záchraně dat a data recovery",
       "publisher": organizationSchema
     }
@@ -235,7 +235,7 @@ export function useSEO(page: keyof typeof seoConfigs) {
   return {
     ...baseConfig,
     ...translatedConfig,
-    canonical: `https://datahelp.eu/${page === 'home' ? '' : page}`
+    canonical: `https://datahelp.cz/${page === 'home' ? '' : page}`
   };
 }
 
@@ -272,22 +272,22 @@ export const generateArticleSchema = (
   },
   "author": {
     "@type": "Person",
-    "name": author || "DataHelp.eu Team",
-    "url": "https://datahelp.eu/about"
+    "name": author || "DataHelp.cz Team",
+    "url": "https://datahelp.cz/about"
   },
   "publisher": {
     "@type": "Organization",
-    "name": "DataHelp.eu",
+    "name": "DataHelp.cz",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://datahelp.eu/DataHelp.eu.svg"
+      "url": "https://datahelp.cz/DataHelp.cz.svg"
     }
   },
   "datePublished": datePublished || new Date().toISOString(),
   "dateModified": dateModified || new Date().toISOString(),
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://datahelp.eu/blog"
+    "@id": "https://datahelp.cz/blog"
   },
   "articleSection": "Data Recovery",
   "inLanguage": "cs"

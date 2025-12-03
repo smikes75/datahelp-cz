@@ -3,7 +3,7 @@ import { onCLS, onFID, onLCP, onFCP, onTTFB } from 'web-vitals';
 
 // Initialize Plausible
 export const plausible = Plausible({
-  domain: 'datahelp.eu',
+  domain: 'datahelp.cz',
   trackLocalhost: false,
   apiHost: 'https://plausible.io',
 });
@@ -12,7 +12,7 @@ export const plausible = Plausible({
 export const trackPageview = (url: string) => {
   if (import.meta.env.PROD) {
     plausible.trackPageview({
-      url: `https://datahelp.eu${url}`,
+      url: `https://datahelp.cz${url}`,
     });
   }
 };

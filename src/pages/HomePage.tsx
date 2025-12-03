@@ -16,11 +16,11 @@ function HomePage() {
     ...seo.schema,
     "mainEntity": {
       "@type": "WebSite",
-      "name": "DataHelp.eu",
-      "url": "https://datahelp.eu",
+      "name": "DataHelp.cz",
+      "url": "https://datahelp.cz",
       "potentialAction": {
         "@type": "SearchAction",
-        "target": "https://datahelp.eu/search?q={search_term_string}",
+        "target": "https://datahelp.cz/search?q={search_term_string}",
         "query-input": "required name=search_term_string"
       }
     },

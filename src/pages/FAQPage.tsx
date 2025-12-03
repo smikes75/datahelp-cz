@@ -57,10 +57,10 @@ function FAQPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <SEO 
-        title={`${t('faq.title')} | DataHelp.eu`}
+        title={`${t('faq.title')} | DataHelp.cz`}
         description={t('faq.subtitle')}
         keywords="data recovery faq, data recovery questions, hdd recovery faq, ssd recovery faq"
-        canonical={`https://datahelp.eu/faq`}
+        canonical={`https://datahelp.cz/faq`}
         schema={schema}
       />
       

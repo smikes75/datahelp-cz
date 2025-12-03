@@ -374,10 +374,10 @@ function PricingPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <SEO
-        title={`${t('pricing.title')} | DataHelp.eu`}
+        title={`${t('pricing.title')} | DataHelp.cz`}
         description={t('pricing.description')}
         keywords="data recovery pricing, hdd recovery cost, ssd recovery price, raid recovery pricing"
-        canonical={`https://datahelp.eu/pricing`}
+        canonical={`https://datahelp.cz/pricing`}
       />
 
       <PageHeader

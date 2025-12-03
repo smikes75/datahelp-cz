@@ -95,7 +95,7 @@ export function Breadcrumbs({ children, customItems }: BreadcrumbsProps) {
   const breadcrumbSchema = generateBreadcrumbSchema(
     breadcrumbs.map(item => ({
       name: item.name,
-      url: `https://datahelp.eu${item.path}`
+      url: `https://datahelp.cz${item.path}`
     }))
   );
 

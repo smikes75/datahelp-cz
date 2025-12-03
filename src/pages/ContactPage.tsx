@@ -102,8 +102,8 @@ function ContactInfoSection() {
           <Mail className="h-5 w-5 text-accent flex-shrink-0 mt-1" />
           <div>
             <p className="font-semibold text-gray-800">E-mail</p>
-            <a href="mailto:info@datahelp.eu" className="text-gray-600 hover:text-primary transition-colors">
-              info@datahelp.eu
+            <a href="mailto:info@datahelp.cz" className="text-gray-600 hover:text-primary transition-colors">
+              info@datahelp.cz
             </a>
           </div>
         </div>
@@ -157,7 +157,7 @@ function ContactInfoSection() {
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title="Mapa - DataHelp.eu"
+            title="Mapa - DataHelp.cz"
           />
         </div>
       </div>
@@ -170,9 +170,9 @@ function ContactPage() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "DataHelp.eu",
-    "url": "https://datahelp.eu",
-    "logo": "/DataHelp.eu.svg",
+    "name": "DataHelp.cz",
+    "url": "https://datahelp.cz",
+    "logo": "/DataHelp.cz.svg",
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+420 775 220 440",
@@ -195,7 +195,7 @@ function ContactPage() {
       city: 'Praha',
       address: 'Jirsíkova 541/1, 186 00 Praha 8 ',
       phone: '+420 775 220 440',
-      email: 'info@datahelp.eu'
+      email: 'info@datahelp.cz'
     },
     {
       country: 'Kreml & Co GesmbH',
@@ -216,10 +216,10 @@ function ContactPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <SEO 
-        title={`${t('contact.title')} | DataHelp.eu`}
+        title={`${t('contact.title')} | DataHelp.cz`}
         description={t('contact.subtitle')}
         keywords="data recovery contact, data recovery service, data recovery help"
-        canonical={`https://datahelp.eu/contact`}
+        canonical={`https://datahelp.cz/contact`}
         schema={schema}
       />
       

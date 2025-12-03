@@ -46,7 +46,7 @@ export const getResponsiveImageUrl = (url: string) => {
 export const preloadCriticalImages = () => {
   const criticalImages = [
     backgroundImages.home,
-    '/DataHelp.eu.svg'
+    '/DataHelp.cz.svg'
   ];
 
   criticalImages.forEach(imagePath => {

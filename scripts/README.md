@@ -67,7 +67,7 @@ Script automaticky:
 2. **Vytvoří/najde tagy** - tagy se vytvářejí automaticky
 3. **Převede na multijazyčnou strukturu** - české texty se zkopírují do všech jazykových variant (CS/EN/DE/IT)
 4. **Spočítá čas čtení** - automaticky na základě délky obsahu (200 slov/min)
-5. **Nastaví výchozí hodnoty** - views: 0, is_published: true, author: "DataHelp.eu"
+5. **Nastaví výchozí hodnoty** - views: 0, is_published: true, author: "DataHelp.cz"
 6. **Přeskočí duplicity** - pokud článek se stejným slug již existuje
 
 ## Kategorie

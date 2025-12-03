@@ -10,7 +10,7 @@ export function generateArticleSchema(post: BlogPost, canonical: string) {
       '@type': 'ImageObject',
       url: post.coverImage.startsWith('http')
         ? post.coverImage
-        : `https://datahelp.eu${post.coverImage}`,
+        : `https://datahelp.cz${post.coverImage}`,
       width: 1200,
       height: 630,
     },
@@ -19,15 +19,15 @@ export function generateArticleSchema(post: BlogPost, canonical: string) {
     author: {
       '@type': 'Person',
       name: post.author,
-      url: 'https://datahelp.eu/o-nas',
+      url: 'https://datahelp.cz/o-nas',
     },
     publisher: {
       '@type': 'Organization',
-      name: 'DataHelp.eu',
-      url: 'https://datahelp.eu',
+      name: 'DataHelp.cz',
+      url: 'https://datahelp.cz',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://datahelp.eu/DataHelp.eu.png',
+        url: 'https://datahelp.cz/DataHelp.cz.png',
         width: 600,
         height: 60,
       },

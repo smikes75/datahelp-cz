@@ -23,8 +23,8 @@ export function SEO({
   title,
   description,
   keywords,
-  canonical = 'https://datahelp.eu',
-  ogImage = 'https://datahelp.eu/DataHelp.eu.png',
+  canonical = 'https://datahelp.cz',
+  ogImage = 'https://datahelp.cz/DataHelp.cz.png',
   ogType = 'website',
   schema,
   noindex = false,
@@ -32,7 +32,7 @@ export function SEO({
 }: SEOProps) {
 
   // Enhanced Open Graph image with proper dimensions
-  const fullOgImage = ogImage.startsWith('http') ? ogImage : `https://datahelp.eu${ogImage}`;
+  const fullOgImage = ogImage.startsWith('http') ? ogImage : `https://datahelp.cz${ogImage}`;
 
   return (
     <Helmet>
@@ -58,7 +58,7 @@ export function SEO({
       <meta property="og:image:height" content="630" />
       <meta property="og:image:alt" content={title} />
       <meta property="og:url" content={canonical} />
-      <meta property="og:site_name" content="DataHelp.eu" />
+      <meta property="og:site_name" content="DataHelp.cz" />
       
       {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />
@@ -81,8 +81,8 @@ export function SEO({
       )}
       
       {/* Additional meta tags */}
-      <meta name="author" content="DataHelp.eu" />
-      <meta name="copyright" content="DataHelp.eu" />
+      <meta name="author" content="DataHelp.cz" />
+      <meta name="copyright" content="DataHelp.cz" />
       <meta name="theme-color" content="#1B387A" />
       
       {/* Geo tags */}

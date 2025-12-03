@@ -143,7 +143,7 @@ export async function importBlogPost(article: ImportArticle): Promise<boolean> {
         content_en: article.content,
         content_de: article.content,
         content_it: article.content,
-        author: 'DataHelp.eu',
+        author: 'DataHelp.cz',
         image_url: article.image || 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31',
         published_at: article.published_at || new Date().toISOString().split('T')[0],
         is_published: true,

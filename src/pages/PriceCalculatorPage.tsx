@@ -247,10 +247,10 @@ function PriceCalculatorPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <SEO 
-        title={`${t('priceCalculator.title')} | DataHelp.eu`}
+        title={`${t('priceCalculator.title')} | DataHelp.cz`}
         description={t('priceCalculator.description')}
         keywords={t('priceCalculator.keywords')}
-        canonical={`https://datahelp.eu/price-calculator`}
+        canonical={`https://datahelp.cz/price-calculator`}
       />
       
       <PageHeader

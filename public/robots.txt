@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://datahelp.eu/sitemap.xml
+Sitemap: https://datahelp.cz/sitemap.xml
 
 # Disallow admin paths
 Disallow: /admin/

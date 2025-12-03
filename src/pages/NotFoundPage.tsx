@@ -46,10 +46,10 @@ export function NotFoundPage() {
         <p className="mt-8 text-gray-600">
           Need help? Contact our support at{' '}
           <a
-            href="mailto:support@datahelp.eu"
+            href="mailto:support@datahelp.cz"
             className="text-accent hover:text-accent-dark underline"
           >
-            support@datahelp.eu
+            support@datahelp.cz
           </a>
         </p>
       </div>

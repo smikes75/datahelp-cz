@@ -4,47 +4,47 @@
 
   <!-- Homepage -->
   <url>
-    <loc>https://datahelp.eu/</loc>
+    <loc>https://datahelp.cz/</loc>
     <lastmod>2025-12-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://datahelp.eu/DataHelp.eu.svg</image:loc>
-      <image:title>DataHelp.eu Logo</image:title>
+      <image:loc>https://datahelp.cz/DataHelp.cz.svg</image:loc>
+      <image:title>DataHelp.cz Logo</image:title>
     </image:image>
   </url>
 
   <!-- Main Pages -->
   <url>
-    <loc>https://datahelp.eu/services</loc>
+    <loc>https://datahelp.cz/services</loc>
     <lastmod>2025-12-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://datahelp.eu/about</loc>
+    <loc>https://datahelp.cz/about</loc>
     <lastmod>2025-12-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://datahelp.eu/contact</loc>
+    <loc>https://datahelp.cz/contact</loc>
     <lastmod>2025-12-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://datahelp.eu/pricing</loc>
+    <loc>https://datahelp.cz/pricing</loc>
     <lastmod>2025-12-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://datahelp.eu/faq</loc>
+    <loc>https://datahelp.cz/faq</loc>
     <lastmod>2025-12-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -52,28 +52,28 @@
 
   <!-- Service Pages -->
   <url>
-    <loc>https://datahelp.eu/services/hdd-recovery</loc>
+    <loc>https://datahelp.cz/services/hdd-recovery</loc>
     <lastmod>2024-12-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://datahelp.eu/services/ssd-recovery</loc>
+    <loc>https://datahelp.cz/services/ssd-recovery</loc>
     <lastmod>2024-12-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://datahelp.eu/services/raid-systems</loc>
+    <loc>https://datahelp.cz/services/raid-systems</loc>
     <lastmod>2024-12-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://datahelp.eu/services/business-solutions</loc>
+    <loc>https://datahelp.cz/services/business-solutions</loc>
     <lastmod>2024-12-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -81,21 +81,21 @@
 
   <!-- Case Studies -->
   <url>
-    <loc>https://datahelp.eu/services/hdd-recovery/case-studies</loc>
+    <loc>https://datahelp.cz/services/hdd-recovery/case-studies</loc>
     <lastmod>2024-12-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://datahelp.eu/services/ssd-recovery/case-studies</loc>
+    <loc>https://datahelp.cz/services/ssd-recovery/case-studies</loc>
     <lastmod>2024-12-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://datahelp.eu/services/raid-systems/case-studies</loc>
+    <loc>https://datahelp.cz/services/raid-systems/case-studies</loc>
     <lastmod>2024-12-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -103,14 +103,14 @@
 
   <!-- Pricing -->
   <url>
-    <loc>https://datahelp.eu/price-calculator</loc>
+    <loc>https://datahelp.cz/price-calculator</loc>
     <lastmod>2024-12-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://datahelp.eu/order-diagnostics</loc>
+    <loc>https://datahelp.cz/order-diagnostics</loc>
     <lastmod>2024-12-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -118,7 +118,7 @@
 
   <!-- Technology -->
   <url>
-    <loc>https://datahelp.eu/technology</loc>
+    <loc>https://datahelp.cz/technology</loc>
     <lastmod>2024-12-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -126,7 +126,7 @@
 
   <!-- Blog -->
   <url>
-    <loc>https://datahelp.eu/blog</loc>
+    <loc>https://datahelp.cz/blog</loc>
     <lastmod>2024-11-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
@@ -134,21 +134,21 @@
 
   <!-- Legal Pages -->
   <url>
-    <loc>https://datahelp.eu/privacy</loc>
+    <loc>https://datahelp.cz/privacy</loc>
     <lastmod>2024-12-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <url>
-    <loc>https://datahelp.eu/terms</loc>
+    <loc>https://datahelp.cz/terms</loc>
     <lastmod>2024-12-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <url>
-    <loc>https://datahelp.eu/cookies</loc>
+    <loc>https://datahelp.cz/cookies</loc>
     <lastmod>2024-12-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>

@@ -35,7 +35,7 @@ export function HomeContact() {
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    title="DataHelp.eu Location"
+                    title="DataHelp.cz Location"
                   />
                 </div>
                 <div className="h-4"></div>

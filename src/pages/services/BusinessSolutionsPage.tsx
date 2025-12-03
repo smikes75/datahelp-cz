@@ -30,22 +30,22 @@ function BusinessSolutionsPage() {
     {
       name: "Ales Wagner",
       position: "Senior Account Manager",
-      email: "wagner@datahelp.eu"
+      email: "wagner@datahelp.cz"
     },
     {
       name: "Lucie Cerna",
       position: "Business Development Manager",
-      email: "cerna@datahelp.eu"
+      email: "cerna@datahelp.cz"
     }
   ];
 
   return (
     <div className="min-h-screen bg-gray-50">
       <SEO 
-        title={`${t('services.business.title')} | DataHelp.eu`}
+        title={`${t('services.business.title')} | DataHelp.cz`}
         description={t('services.business.desc')}
         keywords={t('services.business.keywords.recovery')}
-        canonical="https://datahelp.eu/services/business-solutions"
+        canonical="https://datahelp.cz/services/business-solutions"
         ogImage="/images/backgrounds/business-solutions.webp"
       />
       <div className="relative">

@@ -300,9 +300,9 @@ function OrderDiagnosticsPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <SEO
-        title={`${t('orderDiagnostics.title')} | DataHelp.eu`}
+        title={`${t('orderDiagnostics.title')} | DataHelp.cz`}
         description={t('orderDiagnostics.description')}
-        canonical={`https://datahelp.eu/order-diagnostics`}
+        canonical={`https://datahelp.cz/order-diagnostics`}
       />
 
       <PageHeader

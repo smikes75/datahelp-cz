@@ -34,10 +34,10 @@ export function PrivacyPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <SEO 
-        title={`${t('privacy.title')} | DataHelp.eu`}
+        title={`${t('privacy.title')} | DataHelp.cz`}
         description="Informace o zpracování a ochraně vašich osobních údajů v souladu s GDPR. Transparentní přístup k ochraně soukromí."
         keywords="ochrana osobních údajů, gdpr, soukromí, bezpečnost dat, zpracování údajů"
-        canonical="https://datahelp.eu/privacy"
+        canonical="https://datahelp.cz/privacy"
         ogImage="/images/backgrounds/privacy-bg.webp"
       />
       <PageHeader
@@ -70,7 +70,7 @@ export function PrivacyPage() {
             <p className="text-gray-600 mb-4">{t('privacy.contact.content')}</p>
             <div className="flex flex-col space-y-2">
               <p className="text-gray-600">
-                <strong>Email:</strong> privacy@datahelp.eu
+                <strong>Email:</strong> privacy@datahelp.cz
               </p>
               <p className="text-gray-600">
                 <strong>{t('privacy.contact.address')}:</strong><br />

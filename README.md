@@ -1,6 +1,6 @@
-# DataHelp.eu Website
+# DataHelp.cz Website
 
-This is a React-based website for DataHelp.eu, built with Vite, React, TypeScript, and Tailwind CSS.
+This is a React-based website for DataHelp.cz, built with Vite, React, TypeScript, and Tailwind CSS.
 
 ## Prerequisites
 
