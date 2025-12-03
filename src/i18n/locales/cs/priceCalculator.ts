@@ -20,19 +20,19 @@ export const priceCalculator = {
     hdd: {
       logical: 'Softwarové poškození',
       logicalDesc: 'Smazané soubory, formátování, poškozený souborový systém',
-      platter: 'Poškození plotének',
-      platterDesc: 'Poškrábaná ploténka, špatné sektory, fyzické vady povrchu',
+      platter: 'Poškození ploten',
+      platterDesc: 'Poškrábaná plotna, vadné sektory, fyzické vady povrchu',
       head: 'Závada čtecích hlav',
-      headDesc: 'Poškozené nebo zaseknuté čtecí hlavy, klikání disku',
+      headDesc: 'Poškozené nebo utržené čtecí hlavy, klikání disku',
       motor: 'Závada motoru',
-      motorDesc: 'Nefunkční motor, spintronický problém, disk se neroztočí',
+      motorDesc: 'Nefunkční motor, zadřené ložisko, disk se neroztočí',
       electronic: 'Elektronické poškození',
-      electronicDesc: 'Poškozená PCB deska, přepětí, spálené komponenty'
+      electronicDesc: 'Poškozená PCB deska, přepětí, spálený konektor'
     },
     ssd: {
       logical: 'Softwarové poškození',
-      logicalDesc: 'Smazané soubory, formátování, poškozená tabulka alokace',
-      controller: 'Závada řadiče',
+      logicalDesc: 'Smazané soubory, formátování, poškozená alokační tabulka',
+      controller: 'Závady řadiče',
       controllerDesc: 'Poškozený kontrolér, disk není rozpoznán systémem',
       flash: 'Poškození flash paměti',
       flashDesc: 'Opotřebené paměťové buňky, poškozené NAND čipy',

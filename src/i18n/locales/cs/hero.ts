@@ -8,7 +8,7 @@ export const hero = {
   security: 'Diagnostika a svoz zdarma',
   securityDesc: 'Bez závazků',
   technology: 'Moderní technologie',
-  technologyDesc: 'Špičkové vybavení',
+  technologyDesc: 'Profesionální vybavení',
   experience: '25+ let zkušeností',
   experienceDesc: 'Více jak 55.000 vyřešených zakázek'
 };
