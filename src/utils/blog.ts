@@ -1,0 +1,225 @@
+import { BlogPost, BlogCategoryWithCount, BlogFilter, PaginatedBlogPosts } from '../types/blog';
+import { supabase } from './supabaseClient';
+
+const getPostTags = async (postId: string, locale: string): Promise<string[]> => {
+  try {
+    const { data, error } = await supabase
+      .from('blog_post_tags')
+      .select('tag_id, blog_tags(slug, name_cs, name_en, name_de, name_it)')
+      .eq('post_id', postId);
+
+    if (error) throw error;
+    if (!data) return [];
+
+    return data.map((item: any) => {
+      const tag = item.blog_tags;
+      return tag[`name_${locale}`] || tag.name_en || tag.name_cs;
+    });
+  } catch (error) {
+    console.error('Error fetching post tags:', error);
+    return [];
+  }
+};
+
+export const getBlogPosts = async (locale: string): Promise<BlogPost[]> => {
+  try {
+    const { data, error } = await supabase
+      .from('blog_posts')
+      .select('*')
+      .eq('is_published', true)
+      .order('published_at', { ascending: false });
+
+    if (error) throw error;
+    if (!data || data.length === 0) return [];
+
+    const posts = await Promise.all(data.map(async (post) => {
+      const tags = await getPostTags(post.id, locale);
+      return {
+        slug: post.slug,
+        title: post[`title_${locale}`] || post.title_en,
+        excerpt: post[`excerpt_${locale}`] || post.excerpt_en,
+        date: post.published_at,
+        author: post.author,
+        coverImage: post.image_url || 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31',
+        tags,
+        seoDescription: post[`excerpt_${locale}`] || post.excerpt_en,
+        content: post[`content_${locale}`] || post.content_en,
+        locale: locale,
+        readingTime: post.reading_time_minutes,
+        sourceName: post.source_name,
+        sourceUrl: post.source_url
+      };
+    }));
+
+    return posts;
+  } catch (error) {
+    console.error('Error fetching blog posts:', error);
+    return [];
+  }
+};
+
+export const getBlogPost = async (slug: string, locale: string): Promise<BlogPost | null> => {
+  try {
+    const { data, error } = await supabase
+      .from('blog_posts')
+      .select('*')
+      .eq('slug', slug)
+      .eq('is_published', true)
+      .maybeSingle();
+
+    if (error) throw error;
+    if (!data) return null;
+
+    await supabase
+      .from('blog_posts')
+      .update({ views: data.views + 1 })
+      .eq('id', data.id);
+
+    const tags = await getPostTags(data.id, locale);
+
+    return {
+      slug: data.slug,
+      title: data[`title_${locale}`] || data.title_en,
+      excerpt: data[`excerpt_${locale}`] || data.excerpt_en,
+      date: data.published_at,
+      author: data.author,
+      coverImage: data.image_url || 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31',
+      tags,
+      seoDescription: data[`excerpt_${locale}`] || data.excerpt_en,
+      content: data[`content_${locale}`] || data.content_en,
+      locale: locale,
+      readingTime: data.reading_time_minutes,
+      sourceName: data.source_name,
+      sourceUrl: data.source_url
+    };
+  } catch (error) {
+    console.error('Error fetching blog post:', error);
+    return null;
+  }
+};
+
+export const getBlogCategoriesWithCount = async (locale: string): Promise<BlogCategoryWithCount[]> => {
+  try {
+    const { data: categories, error: catError } = await supabase
+      .from('blog_categories')
+      .select('*')
+      .order('name_cs', { ascending: true });
+
+    if (catError) throw catError;
+    if (!categories) return [];
+
+    const categoriesWithCount: BlogCategoryWithCount[] = [];
+
+    for (const category of categories) {
+      const { count, error: countError } = await supabase
+        .from('blog_post_categories')
+        .select('*', { count: 'exact', head: true })
+        .eq('category_id', category.id);
+
+      if (countError) {
+        console.error('Error counting posts for category:', countError);
+        continue;
+      }
+
+      categoriesWithCount.push({
+        ...category,
+        postCount: count || 0
+      });
+    }
+
+    return categoriesWithCount;
+  } catch (error) {
+    console.error('Error fetching categories with count:', error);
+    return [];
+  }
+};
+
+export const getPaginatedBlogPosts = async (filter: BlogFilter): Promise<PaginatedBlogPosts> => {
+  try {
+    const { category, page = 1, limit = 9, locale = 'cs' } = filter;
+    const from = (page - 1) * limit;
+    const to = from + limit - 1;
+
+    let query = supabase
+      .from('blog_posts')
+      .select('*', { count: 'exact' })
+      .eq('is_published', true);
+
+    if (category && category !== 'all') {
+      const { data: categoryData } = await supabase
+        .from('blog_categories')
+        .select('id')
+        .eq('slug', category)
+        .maybeSingle();
+
+      if (categoryData) {
+        const { data: postIds } = await supabase
+          .from('blog_post_categories')
+          .select('post_id')
+          .eq('category_id', categoryData.id);
+
+        if (postIds && postIds.length > 0) {
+          const ids = postIds.map(p => p.post_id);
+          query = query.in('id', ids);
+        } else {
+          return {
+            posts: [],
+            total: 0,
+            page,
+            totalPages: 0,
+            hasNextPage: false,
+            hasPreviousPage: false
+          };
+        }
+      }
+    }
+
+    const { data, count, error } = await query
+      .order('published_at', { ascending: false })
+      .range(from, to);
+
+    if (error) throw error;
+
+    const posts: BlogPost[] = await Promise.all((data || []).map(async (post) => {
+      const tags = await getPostTags(post.id, locale);
+      return {
+        slug: post.slug,
+        title: post[`title_${locale}`] || post.title_en,
+        excerpt: post[`excerpt_${locale}`] || post.excerpt_en,
+        date: post.published_at,
+        author: post.author,
+        coverImage: post.image_url || 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31',
+        tags,
+        seoDescription: post[`excerpt_${locale}`] || post.excerpt_en,
+        content: post[`content_${locale}`] || post.content_en,
+        locale: locale,
+        readingTime: post.reading_time_minutes,
+        views: post.views,
+        sourceName: post.source_name,
+        sourceUrl: post.source_url
+      };
+    }));
+
+    const total = count || 0;
+    const totalPages = Math.ceil(total / limit);
+
+    return {
+      posts,
+      total,
+      page,
+      totalPages,
+      hasNextPage: page < totalPages,
+      hasPreviousPage: page > 1
+    };
+  } catch (error) {
+    console.error('Error fetching paginated blog posts:', error);
+    return {
+      posts: [],
+      total: 0,
+      page: 1,
+      totalPages: 0,
+      hasNextPage: false,
+      hasPreviousPage: false
+    };
+  }
+};

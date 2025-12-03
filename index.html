@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="/DataHelp.eu.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/DataHelp.eu.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/DataHelp.eu.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/DataHelp.eu.png" />
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="DataHelp.eu" />
+    <title>DataHelp.eu - Professional Data Recovery | HDD, SSD, RAID Recovery</title>
+    <meta name="description" content="Professional data recovery services with over 20 years of experience. Specializing in HDD, SSD and RAID recovery. No data, no charge guarantee." />
+    <meta name="keywords" content="data recovery, hard drive recovery, SSD recovery, RAID recovery, professional data recovery Prague" />
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="/DataHelp.eu.svg" as="image" type="image/svg+xml">
+    <link rel="preload" href="/src/index.css" as="style">
+    <link rel="preload" href="/src/main.tsx" as="script" type="module">
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="preconnect" href="https://static.elfsight.com">
+    <link rel="dns-prefetch" href="https://plausible.io">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="DataHelp.eu - Profesionální záchrana dat" />
+    <meta property="og:description" content="Profesionální služby záchrany dat s více než 20 lety zkušeností. Specializujeme se na obnovu HDD, SSD a RAID systémů." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://datahelp.eu" />
+    <meta property="og:image" content="https://datahelp.eu/DataHelp.eu.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:site_name" content="DataHelp.eu" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="DataHelp.eu - Profesionální záchrana dat" />
+    <meta name="twitter:description" content="Profesionální služby záchrany dat s více než 20 lety zkušeností." />
+    <meta name="twitter:image" content="https://datahelp.eu/DataHelp.eu.png" />
+    
+    <!-- Additional SEO meta tags -->
+    <meta name="author" content="DataHelp.eu" />
+    <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
+    <meta name="googlebot" content="index,follow" />
+    <meta name="theme-color" content="#1B387A" />
+    
+    <!-- Geo tags -->
+    <meta name="geo.region" content="CZ-PR" />
+    <meta name="geo.placename" content="Prague" />
+    <meta name="geo.position" content="50.0922;14.4507" />
+    <meta name="ICBM" content="50.0922, 14.4507" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://datahelp.eu/" />
+    
+    <style>
+      .app-loading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #1B387A;
+        color: white;
+        font-family: system-ui, -apple-system, sans-serif;
+      }
+      
+      /* Critical CSS for above-the-fold content */
+      .hero-gradient {
+        background: linear-gradient(to right, rgba(27, 56, 122, 1) 50%, rgba(27, 56, 122, 0) 100%);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <div class="app-loading">
+        <div style="text-align: center;">
+          <div style="width: 40px; height: 40px; border: 3px solid #ffffff; border-top: 3px solid transparent; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 16px;"></div>
+          <div>Načítání...</div>
+        </div>
+        <noscript>
+          <strong>Omlouváme se, ale tato aplikace nefunguje správně bez povoleného JavaScriptu. Prosím povolte JavaScript pro pokračování.</strong>
+        </noscript>
+      </div>
+    </div>
+    <script type="module" src="/src/main.tsx"></script>
+    
+    <style>
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+    </style>
+  </body>
+</html>

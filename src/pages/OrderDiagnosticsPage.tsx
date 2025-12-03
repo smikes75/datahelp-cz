@@ -1,0 +1,658 @@
+import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { Home, Truck, Package, MessageCircle } from 'lucide-react';
+import { PageHeader } from '../components/PageHeader';
+import { Breadcrumbs } from '../components/Breadcrumbs';
+import { SEO } from '../components/SEO';
+import { Contact } from '../components/Contact';
+import { supabase } from '../utils/supabaseClient';
+
+function OrderDiagnosticsPage() {
+  const { t } = useTranslation();
+  const [formData, setFormData] = useState({
+    customerType: 'individual' as 'individual' | 'company',
+    companyName: '',
+    contactPerson: '',
+    firstName: '',
+    lastName: '',
+    phone: '',
+    email: '',
+    description: '',
+    deliveryMethod: '' as '' | 'personal' | 'shipping' | 'courier',
+    pickupAddress: '',
+    pickupCity: '',
+    pickupZip: ''
+  });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [agreedToTerms, setAgreedToTerms] = useState(false);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value, type } = e.target;
+    const checked = (e.target as HTMLInputElement).checked;
+
+    setFormData(prev => ({
+      ...prev,
+      [name]: type === 'checkbox' ? checked : value
+    }));
+  };
+
+  const handleDeliveryChange = (method: '' | 'personal' | 'shipping' | 'courier') => {
+    setFormData(prev => ({
+      ...prev,
+      deliveryMethod: method
+    }));
+
+    if (method) {
+      setTimeout(() => {
+        const element = document.getElementById(`delivery-${method}`);
+        if (element) {
+          const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+          const offsetPosition = elementPosition - 120;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      }, 100);
+    }
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!formData.deliveryMethod) {
+      alert(t('orderDiagnostics.form.errors.deliveryMethod'));
+      return;
+    }
+
+    if (!agreedToTerms) {
+      alert(t('orderDiagnostics.form.errors.terms'));
+      return;
+    }
+
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    try {
+      const { error } = await supabase
+        .from('diagnostic_orders')
+        .insert([
+          {
+            customer_type: formData.customerType,
+            company_name: formData.customerType === 'company' ? formData.companyName : null,
+            contact_person: formData.customerType === 'company' ? formData.contactPerson : null,
+            first_name: formData.customerType === 'individual' ? formData.firstName : null,
+            last_name: formData.customerType === 'individual' ? formData.lastName : null,
+            phone: formData.phone,
+            email: formData.email,
+            description: formData.description,
+            is_partner: false,
+            delivery_method: formData.deliveryMethod,
+            pickup_address: formData.deliveryMethod === 'shipping' ? formData.pickupAddress : null,
+            pickup_city: formData.deliveryMethod === 'shipping' ? formData.pickupCity : null,
+            pickup_zip: formData.deliveryMethod === 'shipping' ? formData.pickupZip : null,
+            language: 'cs'
+          }
+        ]);
+
+      if (error) throw error;
+
+      setSubmitStatus('success');
+      setFormData({
+        customerType: 'individual',
+        companyName: '',
+        contactPerson: '',
+        firstName: '',
+        lastName: '',
+        phone: '',
+        email: '',
+        description: '',
+        deliveryMethod: '',
+        pickupAddress: '',
+        pickupCity: '',
+        pickupZip: ''
+      });
+      setAgreedToTerms(false);
+    } catch (error) {
+      console.error('Error submitting order:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const renderCustomerTypeSelector = () => (
+    <div className="mb-6">
+      <label className="block text-sm font-medium text-gray-700 mb-3">
+        {t('orderDiagnostics.form.customerType')}
+      </label>
+      <div className="flex gap-4">
+        <label className="flex items-center">
+          <input
+            type="radio"
+            name="customerType"
+            value="individual"
+            checked={formData.customerType === 'individual'}
+            onChange={handleInputChange}
+            className="w-4 h-4 text-primary focus:ring-primary border-gray-300"
+          />
+          <span className="ml-2 text-gray-700">
+            {t('orderDiagnostics.form.individual')}
+          </span>
+        </label>
+        <label className="flex items-center">
+          <input
+            type="radio"
+            name="customerType"
+            value="company"
+            checked={formData.customerType === 'company'}
+            onChange={handleInputChange}
+            className="w-4 h-4 text-primary focus:ring-primary border-gray-300"
+          />
+          <span className="ml-2 text-gray-700">
+            {t('orderDiagnostics.form.company')}
+          </span>
+        </label>
+      </div>
+    </div>
+  );
+
+  const renderNameFields = () => {
+    return (
+      <>
+        {formData.customerType === 'company' && (
+          <div className="grid md:grid-cols-2 gap-6 mb-6">
+            <div>
+              <label htmlFor="companyName" className="block text-sm font-medium text-gray-700 mb-2">
+                {t('orderDiagnostics.form.companyName')}
+              </label>
+              <input
+                type="text"
+                id="companyName"
+                name="companyName"
+                value={formData.companyName}
+                onChange={handleInputChange}
+                required
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+              />
+            </div>
+            <div>
+              <label htmlFor="contactPerson" className="block text-sm font-medium text-gray-700 mb-2">
+                {t('orderDiagnostics.form.contactPerson')}
+              </label>
+              <input
+                type="text"
+                id="contactPerson"
+                name="contactPerson"
+                value={formData.contactPerson}
+                onChange={handleInputChange}
+                required
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+              />
+            </div>
+          </div>
+        )}
+
+        {formData.customerType === 'individual' && (
+          <div className="grid md:grid-cols-2 gap-6 mb-6">
+            <div>
+              <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">
+                {t('orderDiagnostics.form.firstName')}
+              </label>
+              <input
+                type="text"
+                id="firstName"
+                name="firstName"
+                value={formData.firstName}
+                onChange={handleInputChange}
+                required
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+              />
+            </div>
+
+            <div>
+              <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2">
+                {t('orderDiagnostics.form.lastName')}
+              </label>
+              <input
+                type="text"
+                id="lastName"
+                name="lastName"
+                value={formData.lastName}
+                onChange={handleInputChange}
+                required
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+              />
+            </div>
+          </div>
+        )}
+      </>
+    );
+  };
+
+  const renderContactForm = () => (
+    <div className="space-y-6">{/* Removed mt-6 since it's now part of shipping section */}
+
+      <div className="grid md:grid-cols-2 gap-6">
+        <div>
+          <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+            {t('orderDiagnostics.form.phone')}
+          </label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            value={formData.phone}
+            onChange={handleInputChange}
+            required
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+          />
+        </div>
+
+        <div>
+          <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+            {t('orderDiagnostics.form.email')}
+          </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleInputChange}
+            required
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+          />
+        </div>
+      </div>
+
+      <div>
+        <label htmlFor="description" className="block text-sm font-medium text-gray-700 mb-2">
+          {t('orderDiagnostics.form.description')}
+        </label>
+        <textarea
+          id="description"
+          name="description"
+          value={formData.description}
+          onChange={handleInputChange}
+          placeholder={t('orderDiagnostics.form.descriptionPlaceholder')}
+          required
+          rows={5}
+          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent resize-none placeholder:text-gray-400"
+        />
+      </div>
+
+      <div>
+        <a
+          href={`/privacy`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-accent hover:text-accent/80 text-sm"
+        >
+          {t('orderDiagnostics.form.privacyLink')}
+        </a>
+      </div>
+    </div>
+  );
+
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <SEO
+        title={`${t('orderDiagnostics.title')} | DataHelp.eu`}
+        description={t('orderDiagnostics.description')}
+        canonical={`https://datahelp.eu/order-diagnostics`}
+      />
+
+      <PageHeader
+        title={t('orderDiagnostics.title')}
+        subtitle={t('orderDiagnostics.subtitle')}
+      />
+
+      <Breadcrumbs />
+
+      <div className="container mx-auto px-4 py-8">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <h2 className="text-2xl font-bold text-primary mb-6">
+              {t('orderDiagnostics.sections.delivery')}
+            </h2>
+
+            <div className="space-y-4">
+              {/* Shipping Option */}
+              <div id="delivery-shipping" className={`border-2 rounded-lg transition-all ${
+                formData.deliveryMethod === 'shipping'
+                  ? 'border-primary bg-gray-50'
+                  : 'border-gray-200'
+              }`}>
+                <button
+                  type="button"
+                  onClick={() => handleDeliveryChange(formData.deliveryMethod === 'shipping' ? '' : 'shipping')}
+                  className="w-full flex items-start p-6 text-left"
+                >
+                  <div className="flex-1">
+                    <div className="flex items-center space-x-2 mb-2">
+                      <Truck className="h-6 w-6 text-accent" />
+                      <h3 className="text-lg font-semibold text-primary">
+                        {t('orderDiagnostics.delivery.shipping.title')}
+                      </h3>
+                    </div>
+                    <p className="text-gray-600 text-sm">
+                      {t('orderDiagnostics.delivery.shipping.description')}
+                    </p>
+                  </div>
+                </button>
+
+                {formData.deliveryMethod === 'shipping' && (
+                  <div className="px-6 pb-6">
+                    <div className="border-t border-gray-200 pt-6">
+                      <form onSubmit={handleSubmit} className="space-y-6">
+                        {renderCustomerTypeSelector()}
+                        {renderNameFields()}
+
+                        {/* Pickup Address Fields */}
+                        <h4 className="font-semibold text-primary mb-4">
+                          {t('orderDiagnostics.form.pickupAddress')}
+                        </h4>
+                        <div className="space-y-4 mb-6">
+                          <div>
+                            <label htmlFor="pickupAddress" className="block text-sm font-medium text-gray-700 mb-2">
+                              {t('orderDiagnostics.form.street')}
+                            </label>
+                            <input
+                              type="text"
+                              id="pickupAddress"
+                              name="pickupAddress"
+                              value={formData.pickupAddress}
+                              onChange={handleInputChange}
+                              required
+                              placeholder={t('orderDiagnostics.form.streetPlaceholder')}
+                              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                            />
+                          </div>
+                          <div className="grid md:grid-cols-2 gap-4">
+                            <div>
+                              <label htmlFor="pickupCity" className="block text-sm font-medium text-gray-700 mb-2">
+                                {t('orderDiagnostics.form.city')}
+                              </label>
+                              <input
+                                type="text"
+                                id="pickupCity"
+                                name="pickupCity"
+                                value={formData.pickupCity}
+                                onChange={handleInputChange}
+                                required
+                                placeholder={t('orderDiagnostics.form.cityPlaceholder')}
+                                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                              />
+                            </div>
+                            <div>
+                              <label htmlFor="pickupZip" className="block text-sm font-medium text-gray-700 mb-2">
+                                {t('orderDiagnostics.form.zip')}
+                              </label>
+                              <input
+                                type="text"
+                                id="pickupZip"
+                                name="pickupZip"
+                                value={formData.pickupZip}
+                                onChange={handleInputChange}
+                                required
+                                placeholder={t('orderDiagnostics.form.zipPlaceholder')}
+                                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                              />
+                            </div>
+                          </div>
+                        </div>
+
+                        {renderContactForm()}
+
+                        {/* Terms and Submit inside card */}
+                        <div className="border-t border-gray-200 pt-6">
+                          <label className="flex items-start mb-6">
+                            <input
+                              type="checkbox"
+                              checked={agreedToTerms}
+                              onChange={(e) => setAgreedToTerms(e.target.checked)}
+                              className="w-4 h-4 text-primary focus:ring-primary border-gray-300 rounded mt-1 flex-shrink-0"
+                              required
+                            />
+                            <span className="ml-2 text-gray-700 text-sm">
+                              {t('orderDiagnostics.form.terms.text')}{' '}
+                              <a
+                                href={`/terms`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-accent hover:text-accent/80"
+                              >
+                                {t('orderDiagnostics.form.terms.link')}
+                              </a>
+                            </span>
+                          </label>
+
+                          <button
+                            type="submit"
+                            disabled={isSubmitting || !agreedToTerms}
+                            className="w-full bg-primary text-white py-4 px-8 rounded-lg font-semibold hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
+                          >
+                            {isSubmitting ? t('orderDiagnostics.form.submitting') : t('orderDiagnostics.form.submit')}
+                          </button>
+
+                          {submitStatus === 'success' && (
+                            <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg">
+                              <p className="text-green-800 text-center">
+                                {t('orderDiagnostics.form.success')}
+                              </p>
+                            </div>
+                          )}
+
+                          {submitStatus === 'error' && (
+                            <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg">
+                              <p className="text-red-800 text-center">
+                                {t('orderDiagnostics.form.error')}
+                              </p>
+                            </div>
+                          )}
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              {/* Courier Option */}
+              <div id="delivery-courier" className={`border-2 rounded-lg transition-all ${
+                formData.deliveryMethod === 'courier'
+                  ? 'border-primary bg-gray-50'
+                  : 'border-gray-200'
+              }`}>
+                <button
+                  type="button"
+                  onClick={() => handleDeliveryChange(formData.deliveryMethod === 'courier' ? '' : 'courier')}
+                  className="w-full flex items-start p-6 text-left"
+                >
+                  <div className="flex-1">
+                    <div className="flex items-center space-x-2 mb-2">
+                      <Package className="h-6 w-6 text-accent" />
+                      <h3 className="text-lg font-semibold text-primary">
+                        {t('orderDiagnostics.delivery.courier.title')}
+                      </h3>
+                    </div>
+                    <p
+                      className="text-gray-600 text-sm"
+                      dangerouslySetInnerHTML={{ __html: t('orderDiagnostics.delivery.courier.description') }}
+                    />
+                  </div>
+                </button>
+
+                {formData.deliveryMethod === 'courier' && (
+                  <div className="px-6 pb-6">
+                    <div className="border-t border-gray-200 pt-6">
+                      <form onSubmit={handleSubmit} className="space-y-6">
+                        {renderCustomerTypeSelector()}
+                        {renderNameFields()}
+                        {renderContactForm()}
+
+                        {/* Terms and Submit inside card */}
+                        <div className="border-t border-gray-200 pt-6">
+                          <label className="flex items-start mb-6">
+                            <input
+                              type="checkbox"
+                              checked={agreedToTerms}
+                              onChange={(e) => setAgreedToTerms(e.target.checked)}
+                              className="w-4 h-4 text-primary focus:ring-primary border-gray-300 rounded mt-1 flex-shrink-0"
+                              required
+                            />
+                            <span className="ml-2 text-gray-700 text-sm">
+                              {t('orderDiagnostics.form.terms.text')}{' '}
+                              <a
+                                href={`/terms`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-accent hover:text-accent/80"
+                              >
+                                {t('orderDiagnostics.form.terms.link')}
+                              </a>
+                            </span>
+                          </label>
+
+                          <button
+                            type="submit"
+                            disabled={isSubmitting || !agreedToTerms}
+                            className="w-full bg-primary text-white py-4 px-8 rounded-lg font-semibold hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
+                          >
+                            {isSubmitting ? t('orderDiagnostics.form.submitting') : t('orderDiagnostics.form.submit')}
+                          </button>
+
+                          {submitStatus === 'success' && (
+                            <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg">
+                              <p className="text-green-800 text-center">
+                                {t('orderDiagnostics.form.success')}
+                              </p>
+                            </div>
+                          )}
+
+                          {submitStatus === 'error' && (
+                            <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg">
+                              <p className="text-red-800 text-center">
+                                {t('orderDiagnostics.form.error')}
+                              </p>
+                            </div>
+                          )}
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              {/* Personal Option */}
+              <div id="delivery-personal" className={`border-2 rounded-lg transition-all ${
+                formData.deliveryMethod === 'personal'
+                  ? 'border-primary bg-gray-50'
+                  : 'border-gray-200'
+              }`}>
+                <button
+                  type="button"
+                  onClick={() => handleDeliveryChange(formData.deliveryMethod === 'personal' ? '' : 'personal')}
+                  className="w-full flex items-start p-6 text-left"
+                >
+                  <div className="flex-1">
+                    <div className="flex items-center space-x-2 mb-2">
+                      <Home className="h-6 w-6 text-accent" />
+                      <h3 className="text-lg font-semibold text-primary">
+                        {t('orderDiagnostics.delivery.personal.title')}
+                      </h3>
+                    </div>
+                    <p className="text-gray-600 text-sm">
+                      {t('orderDiagnostics.delivery.personal.address')}
+                    </p>
+                    <p className="text-gray-600 text-sm">
+                      {t('orderDiagnostics.delivery.personal.hours')}
+                    </p>
+                  </div>
+                </button>
+
+                {formData.deliveryMethod === 'personal' && (
+                  <div className="px-6 pb-6">
+                    <div className="border-t border-gray-200 pt-6">
+                      <form onSubmit={handleSubmit} className="space-y-6">
+                        {renderCustomerTypeSelector()}
+                        {renderNameFields()}
+                        {renderContactForm()}
+
+                        {/* Terms and Submit inside card */}
+                        <div className="border-t border-gray-200 pt-6">
+                          <label className="flex items-start mb-6">
+                            <input
+                              type="checkbox"
+                              checked={agreedToTerms}
+                              onChange={(e) => setAgreedToTerms(e.target.checked)}
+                              className="w-4 h-4 text-primary focus:ring-primary border-gray-300 rounded mt-1 flex-shrink-0"
+                              required
+                            />
+                            <span className="ml-2 text-gray-700 text-sm">
+                              {t('orderDiagnostics.form.terms.text')}{' '}
+                              <a
+                                href={`/terms`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-accent hover:text-accent/80"
+                              >
+                                {t('orderDiagnostics.form.terms.link')}
+                              </a>
+                            </span>
+                          </label>
+
+                          <button
+                            type="submit"
+                            disabled={isSubmitting || !agreedToTerms}
+                            className="w-full bg-primary text-white py-4 px-8 rounded-lg font-semibold hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
+                          >
+                            {isSubmitting ? t('orderDiagnostics.form.submitting') : t('orderDiagnostics.form.submit')}
+                          </button>
+
+                          {submitStatus === 'success' && (
+                            <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg">
+                              <p className="text-green-800 text-center">
+                                {t('orderDiagnostics.form.success')}
+                              </p>
+                            </div>
+                          )}
+
+                          {submitStatus === 'error' && (
+                            <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg">
+                              <p className="text-red-800 text-center">
+                                {t('orderDiagnostics.form.error')}
+                              </p>
+                            </div>
+                          )}
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+
+          {/* Contact Form Section - Hidden to avoid distraction from main order form */}
+          {/* <div className="bg-white rounded-lg shadow-lg p-8 mt-8">
+            <div className="flex items-center space-x-2 mb-2">
+              <MessageCircle className="h-6 w-6 text-accent" />
+              <h2 className="text-2xl font-bold text-primary">
+                {t('orderDiagnostics.sections.contactForm.title')}
+              </h2>
+            </div>
+            <p className="text-gray-600 mb-6">
+              {t('orderDiagnostics.sections.contactForm.subtitle')}
+            </p>
+            <Contact />
+          </div> */}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default OrderDiagnosticsPage;

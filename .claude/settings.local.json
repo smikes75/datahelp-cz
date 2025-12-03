@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(npm run dev:*)",
+      "Bash(node test-pages.js:*)",
+      "Bash(mv:*)",
+      "Bash(node test-pages.cjs:*)",
+      "Bash(node test-links.cjs:*)",
+      "Bash(node:*)",
+      "Bash(curl:*)",
+      "Bash(ls:*)",
+      "WebFetch(domain:datahelp.cz)",
+      "WebFetch(domain:www.zachrana-dat.cz)",
+      "WebFetch(domain:www.exalab.cz)",
+      "WebFetch(domain:www.data112.cz)",
+      "Bash(npm run build:*)",
+      "Bash(git init:*)",
+      "Bash(git add:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
