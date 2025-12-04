@@ -5,7 +5,6 @@ import { siteConfig } from '../../config/site.config';
 
 export function HomeContact() {
   const { t, i18n } = useTranslation();
-  const isCzVersion = siteConfig.version === 'cz';
   const showMap = siteConfig.features.showMap && i18n.language === 'cs';
   const showFormOnMobile = siteConfig.features.showContactFormOnHomepageMobile;
 

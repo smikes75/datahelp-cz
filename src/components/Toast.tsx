@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useCallback } from 'react';
 import { CheckCircle, XCircle, AlertCircle, X } from 'lucide-react';
 
 export type ToastType = 'success' | 'error' | 'info';
@@ -15,6 +15,13 @@ export function Toast({ id, message, type, duration = 5000, onClose }: ToastProp
   const [isVisible, setIsVisible] = React.useState(false);
   const [isLeaving, setIsLeaving] = React.useState(false);
 
+  const handleClose = useCallback(() => {
+    setIsLeaving(true);
+    setTimeout(() => {
+      onClose(id);
+    }, 300); // Match animation duration
+  }, [id, onClose]);
+
   useEffect(() => {
     // Trigger entrance animation
     const showTimer = setTimeout(() => setIsVisible(true), 10);
@@ -28,14 +35,7 @@ export function Toast({ id, message, type, duration = 5000, onClose }: ToastProp
       clearTimeout(showTimer);
       clearTimeout(hideTimer);
     };
-  }, [duration]);
-
-  const handleClose = () => {
-    setIsLeaving(true);
-    setTimeout(() => {
-      onClose(id);
-    }, 300); // Match animation duration
-  };
+  }, [duration, handleClose]);
 
   const icons = {
     success: <CheckCircle className="h-5 w-5 text-green-600" />,

@@ -8,7 +8,7 @@ import { SEO } from '../components/SEO';
 function TermsPage() {
   const { t } = useTranslation();
 
-  const sectionIcons: { [key: string]: any } = {
+  const sectionIcons: { [key: string]: React.ReactNode } = {
     introductory: <FileText className="h-8 w-8 text-accent" />,
     contractFormation: <ClipboardCheck className="h-8 w-8 text-accent" />,
     pricing: <DollarSign className="h-8 w-8 text-accent" />,
@@ -52,7 +52,7 @@ function TermsPage() {
           </div>
 
           {/* All Sections */}
-          {sections.map(([key, section]: [string, any]) => (
+          {sections.map(([key, section]: [string, { title?: string; content?: string }]) => (
             <div key={key} className="bg-white rounded-lg shadow-lg p-8 mb-8">
               <div className="flex items-start space-x-4 mb-4">
                 <div className="flex-shrink-0 mt-1">

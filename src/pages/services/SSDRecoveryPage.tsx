@@ -1,5 +1,5 @@
 import React from 'react';
-import { Smartphone, Zap, Cpu, Database, ArrowRight } from 'lucide-react';
+import { Zap, Cpu, Database, ArrowRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { Breadcrumbs } from '../../components/Breadcrumbs';

@@ -46,7 +46,7 @@ export function CookieConsentProvider({ children }: { children: ReactNode }) {
         setPreferences({ ...DEFAULT_PREFERENCES, ...parsed });
         setConsentGiven(true);
         setShowBanner(false);
-      } catch (e) {
+      } catch {
         // Invalid storage, show banner
         setShowBanner(true);
       }

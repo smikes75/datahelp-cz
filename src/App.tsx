@@ -45,6 +45,9 @@ const LoginPage = React.lazy(() => import('./pages/admin/LoginPage'));
 const BlogPage = React.lazy(() => import('./pages/BlogPage'));
 const BlogPostPage = React.lazy(() => import('./pages/BlogPostPage'));
 
+// Debug page
+const DebugEnv = React.lazy(() => import('./pages/DebugEnv'));
+
 // Preload critical pages
 const preloadPages = () => {
   // Preload most commonly visited pages
@@ -135,6 +138,7 @@ function App() {
                         <Route path="/cookies" element={<CookiesPage />} />
                         <Route path="/blog" element={<BlogPage />} />
                         <Route path="/blog/:slug" element={<BlogPostPage />} />
+                        <Route path="/debug-env" element={<DebugEnv />} />
                         <Route path="*" element={<NotFoundPage />} />
                       </Routes>
                     </Suspense>

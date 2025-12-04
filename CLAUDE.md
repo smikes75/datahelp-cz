@@ -92,6 +92,82 @@ export default PrivacyPage;
 - `src/pages/PrivacyPage.tsx`
 - `src/pages/TermsPage.tsx`
 
+### 5. Cookie Consent System
+**Implementace**: Kompletní cookie consent systém podle GDPR požadavků
+
+**Komponenty:**
+- `CookieConsentContext.tsx` - Globální správa stavu consent (localStorage klíč: 'owcc')
+- `CookieConsent.tsx` - Banner (pozice: `bottom-28` na mobilu, `bottom-0` na desktopu)
+- `CookieSettings.tsx` - Modal pro detailní nastavení
+
+**Kategorie cookies:**
+1. Funkční (povinné, locked)
+2. Analytické
+3. Marketingové
+4. Personalizační
+
+**UX vylepšení:**
+- Banner: 2 tlačítka (Přijmout vše / Nastavení)
+- Modal: 1 tlačítko (Uložit nastavení), křížek pro zavření
+- Toggle switche: iOS-style pills (20px × 40px, kulička 16px)
+- Responzivní: pořadí tlačítek se mění na mobilu (Flexbox `order`)
+- Z-index: Banner `z-50`, Modal `z-[60]`
+
+**Soubory:**
+- `src/contexts/CookieConsentContext.tsx`
+- `src/components/CookieConsent.tsx`
+- `src/components/CookieSettings.tsx`
+- `src/i18n/locales/cs/cookies.ts` - Přesný text z datahelp.cz
+
+### 6. Supabase formuláře - Oprava a konfigurace
+**Problém**: Formuláře nefungovaly - chyběla Supabase credentials a databázové tabulky
+
+**Řešení:**
+1. **Dočasně hardcodované credentials** v `src/utils/supabaseClient.ts`
+   - Pro lokální vývoj funguje okamžitě
+   - Pro produkci: environment variables v Netlify
+
+2. **Vytvořeny databázové tabulky:**
+   - `contact_forms` - Kontaktní formulář (s `user_agent` sloupcem)
+   - `diagnostic_orders` - Objednávky diagnostiky
+
+**Struktura diagnostic_orders tabulky:**
+```sql
+CREATE TABLE diagnostic_orders (
+  id uuid PRIMARY KEY,
+  customer_type text,           -- 'individual' nebo 'company'
+  company_name text,
+  contact_person text,
+  first_name text,
+  last_name text,
+  phone text NOT NULL,
+  email text NOT NULL,
+  description text NOT NULL,
+  delivery_method text NOT NULL, -- 'personal', 'shipping', 'courier'
+  pickup_address text,           -- Pro shipping metodu
+  pickup_city text,
+  pickup_zip text,
+  language text DEFAULT 'cs',
+  status text DEFAULT 'pending',
+  user_agent text,
+  processed boolean DEFAULT false,
+  created_at timestamptz,
+  updated_at timestamptz
+);
+```
+
+**Row Level Security (RLS):**
+- INSERT: Kdokoliv může vložit (anonymní uživatelé)
+- SELECT/UPDATE/DELETE: Pouze autentizovaní uživatelé
+
+**Soubory:**
+- `src/utils/supabaseClient.ts` - Hardcoded credentials (dočasně)
+- `supabase/migrations/20251128102534_create_diagnostic_orders_table.sql`
+
+**Status:**
+- ✅ Kontaktní formulář funguje
+- ✅ Všechny 3 varianty objednávek fungují (osobní předání, svoz kurýrem, zaslání zásilkovnou)
+
 ## Známé problémy a řešení
 
 ### Logo se nezobrazuje na Netlify
@@ -110,12 +186,16 @@ export default PrivacyPage;
 **Soubor:** `netlify.toml:48-52`
 
 ### Supabase credentials
-Aplikace může běžet i bez Supabase credentials (fallback):
-- Formuláře zobrazí chybovou hlášku
-- Blog nebude fungovat
-- Jinak vše funkční
+**Aktuální stav**: Credentials jsou **dočasně hardcoded** v `src/utils/supabaseClient.ts`
 
-**Soubor:** `src/utils/supabase.ts`
+**Důvod**: Environment variables se nepodařilo načíst přes Vite `.env` systém
+
+**Poznámka**:
+- Supabase ANON key je veřejný klíč, takže hardcoding je bezpečný
+- Pro produkci jsou credentials nastavené v Netlify Environment Variables
+- Row Level Security (RLS) chrání databázi i s public key
+
+**Soubor:** `src/utils/supabaseClient.ts:3-5`
 
 ### i18n undefined errors
 Přidány fallback operátory pro .map() volání:
@@ -239,4 +319,14 @@ npm run lint             # ESLint kontrola
 
 ---
 
-*Poslední aktualizace: 4. prosince 2024*
+*Poslední aktualizace: 4. prosince 2024 (18:00)*
+
+## Changelog této session
+
+### 4. prosince 2024
+- ✅ Implementován Cookie Consent System (GDPR compliant)
+- ✅ Opraveny Supabase formuláře (hardcoded credentials jako dočasné řešení)
+- ✅ Vytvořena tabulka `diagnostic_orders` v Supabase
+- ✅ UX vylepšení: Cookie Settings modal (zjednodušená tlačítka, iOS-style pills)
+- ✅ Z-index fix: odstranění sticky headeru v Cookie Settings
+- ✅ Toggle switche responzivní: 20px × 40px, kulička 16px

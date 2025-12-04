@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { HardDrive, Smartphone, Database, Clock, Microscope, Cpu, Zap, ChevronDown, ChevronUp, Wrench, AlertCircle, Banknote, ClipboardList, Calculator } from 'lucide-react';
+import { HardDrive, Smartphone, Database, Clock, Microscope, Cpu, Zap, ChevronDown, ChevronUp, Wrench, AlertCircle, ClipboardList, Calculator } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { PageHeader } from '../components/PageHeader';

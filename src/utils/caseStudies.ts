@@ -4,7 +4,8 @@ const caseStudiesData = {
   cs: csCaseStudies
 };
 
-export const getCaseStudies = (type: 'hdd' | 'ssd' | 'raid', locale: string) => {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export const getCaseStudies = (type: 'hdd' | 'ssd' | 'raid', _locale: string) => {
   const studies = caseStudiesData.cs;
   return studies ? studies[type] : [];
 };

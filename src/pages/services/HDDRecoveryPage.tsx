@@ -1,8 +1,7 @@
 import React from 'react';
-import { HardDrive, Shield, Wrench, AlertCircle, ArrowRight } from 'lucide-react';
+import { Shield, Wrench, AlertCircle, ArrowRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import { backgroundImages } from '../../utils/imageUtils';
 import { Breadcrumbs } from '../../components/Breadcrumbs';
 import { SEO } from '../../components/SEO';
 

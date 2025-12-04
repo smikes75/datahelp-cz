@@ -199,12 +199,6 @@ function PriceCalculatorPage() {
     };
   };
 
-  const handleCalculate = () => {
-    if (calculator.deviceType && calculator.damageType) {
-      setShowResult(true);
-    }
-  };
-
   const resetCalculator = () => {
     setShowResult(false);
     setCurrentStep(1);

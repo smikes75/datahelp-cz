@@ -1,6 +1,5 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { ChevronDown } from 'lucide-react';
 import { LoadingSkeleton } from './LoadingSkeleton';
 
 export function AboutGallery() {
@@ -8,7 +7,6 @@ export function AboutGallery() {
   const [isLoading, setIsLoading] = React.useState(true);
   const [currentIndex, setCurrentIndex] = React.useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = React.useState(true);
-  const [visibleCount, setVisibleCount] = React.useState(3);
 
   const images = [
     {
@@ -51,10 +49,6 @@ export function AboutGallery() {
   const goToSlide = (index: number) => {
     setIsAutoPlaying(false);
     setCurrentIndex(index);
-  };
-
-  const loadMore = () => {
-    setVisibleCount(prev => Math.min(prev + 3, images.length));
   };
 
   if (isLoading) {

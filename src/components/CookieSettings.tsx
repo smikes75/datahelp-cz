@@ -10,8 +10,6 @@ export function CookieSettings() {
     showSettings,
     preferences,
     updatePreferences,
-    acceptAll,
-    rejectAll,
     savePreferences,
     closeSettings,
   } = useCookieConsent();
@@ -45,7 +43,7 @@ export function CookieSettings() {
     <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/50 p-4">
       <div className="bg-white rounded-lg shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
         {/* Header */}
-        <div className="sticky top-0 bg-white border-b border-gray-200 px-6 py-4 flex items-center justify-between">
+        <div className="bg-white border-b border-gray-200 px-6 py-4 flex items-center justify-between">
           <h2 className="text-2xl font-bold text-primary">
             {t('cookieSettings.title')}
           </h2>
@@ -90,26 +88,38 @@ export function CookieSettings() {
 
                   {/* Toggle Switch */}
                   <button
+                    type="button"
                     disabled={category.locked}
                     onClick={() =>
                       updatePreferences({
                         [category.key]: !preferences[category.key as keyof typeof preferences],
                       })
                     }
-                    className={`relative inline-flex h-6 w-11 flex-shrink-0 items-center rounded-md transition-colors ${
-                      category.locked
+                    className={`
+                      relative inline-flex flex-shrink-0 cursor-pointer
+                      items-center rounded-full border-2 border-transparent
+                      transition-colors duration-200 ease-in-out
+                      focus:outline-none
+                      w-11 min-w-[44px] h-6
+                      ${category.locked
                         ? 'bg-gray-300 cursor-not-allowed'
                         : preferences[category.key as keyof typeof preferences]
-                        ? 'bg-primary'
-                        : 'bg-gray-300'
-                    }`}
+                          ? 'bg-primary'
+                          : 'bg-gray-300'
+                      }
+                    `}
                   >
                     <span
-                      className={`inline-block h-5 w-5 transform rounded-sm bg-white shadow transition-transform ${
-                        preferences[category.key as keyof typeof preferences]
+                      className={`
+                        pointer-events-none inline-block
+                        w-5 h-5
+                        transform rounded-full bg-white shadow ring-0
+                        transition duration-200 ease-in-out
+                        ${preferences[category.key as keyof typeof preferences]
                           ? 'translate-x-5'
-                          : 'translate-x-0.5'
-                      }`}
+                          : 'translate-x-0'
+                        }
+                      `}
                     />
                   </button>
                 </div>
@@ -120,27 +130,13 @@ export function CookieSettings() {
             ))}
           </div>
 
-          {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-3">
-            <button
-              onClick={rejectAll}
-              className="flex-1 px-6 py-3 bg-white border-2 border-gray-300 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-colors"
-            >
-              {t('cookieSettings.rejectAll')}
-            </button>
-            <button
-              onClick={savePreferences}
-              className="flex-1 px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary-light transition-colors"
-            >
-              {t('cookieSettings.saveSettings')}
-            </button>
-            <button
-              onClick={acceptAll}
-              className="flex-1 px-6 py-3 bg-accent text-white font-semibold rounded-lg hover:bg-accent-dark transition-colors"
-            >
-              {t('cookieSettings.acceptAll')}
-            </button>
-          </div>
+          {/* Action Button */}
+          <button
+            onClick={savePreferences}
+            className="w-full px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary-light transition-colors"
+          >
+            {t('cookieSettings.saveSettings')}
+          </button>
         </div>
       </div>
     </div>

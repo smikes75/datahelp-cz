@@ -68,7 +68,7 @@ function PrivacyPage() {
             <h2 className="text-2xl font-bold text-primary mb-4">{t('privacy.processingPurposes.title')}</h2>
             <p className="text-gray-700 leading-relaxed mb-6">{t('privacy.processingPurposes.content')}</p>
             <div className="space-y-6">
-              {(t('privacy.processingPurposes.purposes', { returnObjects: true }) as any[] || []).map((purpose: any, index: number) => (
+              {(t('privacy.processingPurposes.purposes', { returnObjects: true }) as Array<{ title: string; content: string }> || []).map((purpose, index: number) => (
                 <div key={index} className="border-l-4 border-accent pl-4">
                   <h3 className="text-lg font-semibold text-primary mb-2">{purpose.title}</h3>
                   <p className="text-gray-700 leading-relaxed">{purpose.content}</p>
@@ -104,7 +104,7 @@ function PrivacyPage() {
             <h2 className="text-2xl font-bold text-primary mb-4">{t('privacy.rights.title')}</h2>
             <p className="text-gray-700 leading-relaxed mb-6">{t('privacy.rights.intro')}</p>
             <div className="space-y-6">
-              {(t('privacy.rights.items', { returnObjects: true }) as any[] || []).map((right: any, index: number) => (
+              {(t('privacy.rights.items', { returnObjects: true }) as Array<{ title: string; content: string }> || []).map((right, index: number) => (
                 <div key={index} className="border-l-4 border-primary pl-4">
                   <h3 className="text-lg font-semibold text-primary mb-2">{right.title}</h3>
                   <p className="text-gray-700 leading-relaxed">{right.content}</p>

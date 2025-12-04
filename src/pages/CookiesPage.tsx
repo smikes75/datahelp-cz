@@ -8,7 +8,7 @@ import { SEO } from '../components/SEO';
 function CookiesPage() {
   const { t } = useTranslation();
 
-  const sectionIcons: { [key: string]: any } = {
+  const sectionIcons: { [key: string]: React.ReactNode } = {
     functional: <Shield className="h-8 w-8 text-accent" />,
     analytical: <TrendingUp className="h-8 w-8 text-accent" />,
     marketing: <Target className="h-8 w-8 text-accent" />,
@@ -51,7 +51,7 @@ function CookiesPage() {
 
           {/* Cookie Sections with Tables */}
           {sections.map((section) => {
-            const sectionData = t(`cookies.sections.${section}`, { returnObjects: true }) as any;
+            const sectionData = t(`cookies.sections.${section}`, { returnObjects: true }) as { title?: string; description?: string; cookies?: Array<{ name: string; source: string; service?: string; description: string }> };
             const cookies = sectionData?.cookies || [];
 
             return (
@@ -91,7 +91,7 @@ function CookiesPage() {
                             </tr>
                           </thead>
                           <tbody className="bg-white">
-                            {cookies.map((cookie: any, index: number) => (
+                            {cookies.map((cookie, index: number) => (
                               <tr key={index} className="border-b border-gray-200 last:border-b-0">
                                 <td className="px-4 py-3 text-sm text-gray-900 font-mono">
                                   {cookie.name}

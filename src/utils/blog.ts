@@ -11,7 +11,7 @@ const getPostTags = async (postId: string, locale: string): Promise<string[]> =>
     if (error) throw error;
     if (!data) return [];
 
-    return data.map((item: any) => {
+    return data.map((item: { blog_tags: { slug: string; name_cs: string; name_en: string; name_de: string; name_it: string; [key: string]: string } }) => {
       const tag = item.blog_tags;
       return tag[`name_${locale}`] || tag.name_en || tag.name_cs;
     });
@@ -98,7 +98,8 @@ export const getBlogPost = async (slug: string, locale: string): Promise<BlogPos
   }
 };
 
-export const getBlogCategoriesWithCount = async (locale: string): Promise<BlogCategoryWithCount[]> => {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export const getBlogCategoriesWithCount = async (_locale: string): Promise<BlogCategoryWithCount[]> => {
   try {
     const { data: categories, error: catError } = await supabase
       .from('blog_categories')

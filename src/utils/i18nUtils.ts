@@ -8,7 +8,8 @@ export const isSupportedLanguage = (lang: string): lang is SupportedLanguage => 
 };
 
 // Extract language from URL path
-export const getLanguageFromPath = (path: string): SupportedLanguage | null => {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export const getLanguageFromPath = (_path: string): SupportedLanguage | null => {
   return null;
 };
 
@@ -18,7 +19,8 @@ export const getPathWithoutLanguage = (path: string): string => {
 };
 
 // Add language prefix to path
-export const addLanguageToPath = (path: string, language: SupportedLanguage): string => {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export const addLanguageToPath = (path: string, _language: SupportedLanguage): string => {
   return path;
 };
 
