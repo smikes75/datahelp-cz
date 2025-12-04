@@ -319,14 +319,57 @@ npm run lint             # ESLint kontrola
 
 ---
 
-*Poslední aktualizace: 4. prosince 2024 (18:00)*
+*Poslední aktualizace: 4. prosince 2024 (21:00)*
 
-## Changelog této session
+## Changelog
 
-### 4. prosince 2024
+### 4. prosince 2024 - Session 2 (večer)
+
+#### Blog migrace z datahelp.cz
+- ✅ Vytvořen scraper pro stažení článků z datahelp.cz/clanky (`scripts/scrape-content.cjs`)
+- ✅ Staženo 80 článků s plným obsahem (465 KB textu)
+- ✅ Vytvořeny SQL skripty pro Supabase:
+  - `scripts/create-blog-tables.sql` - vytvoření tabulek
+  - `scripts/import-articles-full.sql` - import článků
+- ✅ Blog tabulky v Supabase:
+  - `blog_posts` - články s vícejazyčnou podporou
+  - `blog_categories` - kategorie (4: Zálohování dat, První pomoc, Technologie, Naše aktivity)
+  - `blog_post_categories` - many-to-many propojení
+- ✅ SEO redirecty v `netlify.toml`: `/clanky/*` → `/blog/*` (301)
+- ✅ Aktualizovány kategorie v `BlogPage.tsx`
+- ✅ Fix `blog.ts`: `view_count` místo `views`, odstraněna závislost na `blog_tags`
+
+#### UI vylepšení - Nonstop hotline tlačítko (mobil)
+- ✅ Odstraněno bílé "Volat" tlačítko z footeru (`StickyCTA`)
+- ✅ Přidáno oranžové "Nonstop hotline" tlačítko:
+  - Homepage: `src/components/HomeContact.tsx`
+  - Order Diagnostics: `src/pages/OrderDiagnosticsPage.tsx`
+- ✅ Styling tlačítka:
+  - Oranžové pozadí (`bg-accent`)
+  - Modrý outline (`ring-2 ring-primary`)
+  - Hover efekt: scale (`hover:scale-105`)
+  - Velikost: `py-3 px-6 text-base`
+  - Vycentrované (`inline-flex`, `justify-center`)
+
+#### Fix: Bílý pruh nad patičkou (mobil)
+- ✅ Odstraněn `pb-16` z `<main>` v `App.tsx`
+- ✅ Upraven padding v `HomeContact.tsx`: `pb-8 md:pb-16`
+
+**Soubory změněné v této session:**
+- `src/App.tsx` - odstraněn bottom padding
+- `src/components/Footer.tsx` - odstraněn StickyCTA
+- `src/components/HomeContact.tsx` - přidáno hotline tlačítko
+- `src/pages/OrderDiagnosticsPage.tsx` - přidáno hotline tlačítko
+- `src/pages/BlogPage.tsx` - aktualizovány kategorie
+- `src/utils/blog.ts` - fix view_count, odstranění tags
+- `netlify.toml` - SEO redirecty pro blog
+- `scripts/*.cjs` - scraper a SQL generátory
+
+### 4. prosince 2024 - Session 1 (odpoledne)
 - ✅ Implementován Cookie Consent System (GDPR compliant)
 - ✅ Opraveny Supabase formuláře (hardcoded credentials jako dočasné řešení)
 - ✅ Vytvořena tabulka `diagnostic_orders` v Supabase
 - ✅ UX vylepšení: Cookie Settings modal (zjednodušená tlačítka, iOS-style pills)
 - ✅ Z-index fix: odstranění sticky headeru v Cookie Settings
 - ✅ Toggle switche responzivní: 20px × 40px, kulička 16px
+- ✅ Fix: Cookie toggle na mobilu (pilulka místo kruhu)
