@@ -1,24 +1,10 @@
 import { BlogPost, BlogCategoryWithCount, BlogFilter, PaginatedBlogPosts } from '../types/blog';
 import { supabase } from './supabaseClient';
 
-const getPostTags = async (postId: string, locale: string): Promise<string[]> => {
-  try {
-    const { data, error } = await supabase
-      .from('blog_post_tags')
-      .select('tag_id, blog_tags(slug, name_cs, name_en, name_de, name_it)')
-      .eq('post_id', postId);
-
-    if (error) throw error;
-    if (!data) return [];
-
-    return data.map((item: { blog_tags: { slug: string; name_cs: string; name_en: string; name_de: string; name_it: string; [key: string]: string } }) => {
-      const tag = item.blog_tags;
-      return tag[`name_${locale}`] || tag.name_en || tag.name_cs;
-    });
-  } catch (error) {
-    console.error('Error fetching post tags:', error);
-    return [];
-  }
+// Tagy jsou zatím prázdné - tabulka blog_tags neexistuje
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const getPostTags = async (_postId: string, _locale: string): Promise<string[]> => {
+  return [];
 };
 
 export const getBlogPosts = async (locale: string): Promise<BlogPost[]> => {
@@ -72,7 +58,7 @@ export const getBlogPost = async (slug: string, locale: string): Promise<BlogPos
 
     await supabase
       .from('blog_posts')
-      .update({ views: data.views + 1 })
+      .update({ view_count: (data.view_count || 0) + 1 })
       .eq('id', data.id);
 
     const tags = await getPostTags(data.id, locale);
@@ -195,7 +181,7 @@ export const getPaginatedBlogPosts = async (filter: BlogFilter): Promise<Paginat
         content: post[`content_${locale}`] || post.content_en,
         locale: locale,
         readingTime: post.reading_time_minutes,
-        views: post.views,
+        views: post.view_count,
         sourceName: post.source_name,
         sourceUrl: post.source_url
       };

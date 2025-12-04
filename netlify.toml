@@ -6,6 +6,38 @@
 [build.environment]
   NODE_VERSION = "20"
 
+# SEO Redirecty - zachování starých URL z magazínu
+[[redirects]]
+  from = "/clanky/:slug"
+  to = "/blog/:slug"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/clanky/"
+  to = "/blog"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/clanky"
+  to = "/blog"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/magazin/*"
+  to = "/blog/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/magazin"
+  to = "/blog"
+  status = 301
+  force = true
+
+# SPA fallback - musí být poslední
 [[redirects]]
   from = "/*"
   to = "/index.html"

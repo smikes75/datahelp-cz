@@ -87,41 +87,43 @@ export function CookieSettings() {
                   </div>
 
                   {/* Toggle Switch */}
-                  <button
-                    type="button"
-                    disabled={category.locked}
-                    onClick={() =>
-                      updatePreferences({
-                        [category.key]: !preferences[category.key as keyof typeof preferences],
-                      })
-                    }
-                    className={`
-                      relative inline-flex flex-shrink-0 cursor-pointer
-                      items-center rounded-full border-2 border-transparent
-                      transition-colors duration-200 ease-in-out
-                      focus:outline-none
-                      w-11 min-w-[44px] h-6
-                      ${category.locked
-                        ? 'bg-gray-300 cursor-not-allowed'
-                        : preferences[category.key as keyof typeof preferences]
-                          ? 'bg-primary'
-                          : 'bg-gray-300'
+                  <div style={{ width: '44px', height: '24px', flexShrink: 0 }}>
+                    <button
+                      type="button"
+                      disabled={category.locked}
+                      onClick={() =>
+                        updatePreferences({
+                          [category.key]: !preferences[category.key as keyof typeof preferences],
+                        })
                       }
-                    `}
-                  >
-                    <span
+                      style={{ width: '100%', height: '100%' }}
                       className={`
-                        pointer-events-none inline-block
-                        w-5 h-5
-                        transform rounded-full bg-white shadow ring-0
-                        transition duration-200 ease-in-out
-                        ${preferences[category.key as keyof typeof preferences]
-                          ? 'translate-x-5'
-                          : 'translate-x-0'
+                        relative inline-flex cursor-pointer
+                        items-center rounded-full border-2 border-transparent
+                        transition-colors duration-200 ease-in-out
+                        focus:outline-none
+                        ${category.locked
+                          ? 'bg-gray-300 cursor-not-allowed'
+                          : preferences[category.key as keyof typeof preferences]
+                            ? 'bg-primary'
+                            : 'bg-gray-300'
                         }
                       `}
-                    />
-                  </button>
+                    >
+                      <span
+                        style={{ width: '20px', height: '20px' }}
+                        className={`
+                          pointer-events-none inline-block
+                          transform rounded-full bg-white shadow ring-0
+                          transition duration-200 ease-in-out
+                          ${preferences[category.key as keyof typeof preferences]
+                            ? 'translate-x-5'
+                            : 'translate-x-0'
+                          }
+                        `}
+                      />
+                    </button>
+                  </div>
                 </div>
                 <p className="text-sm text-gray-600 leading-relaxed">
                   {category.description}

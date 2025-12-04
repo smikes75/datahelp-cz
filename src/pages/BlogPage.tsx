@@ -16,11 +16,11 @@ const BlogPage: React.FC = () => {
   const articlesPerPage = 6;
 
   const categories = [
-    { id: 'novinky', name: 'Novinky' },
+    { id: 'all', name: 'Vše' },
+    { id: 'zalohovani-dat', name: 'Zálohování dat' },
+    { id: 'prvni-pomoc', name: 'První pomoc' },
     { id: 'technologie', name: 'Technologie' },
-    { id: 'navody', name: 'Návody' },
-    { id: 'nase-aktivity', name: 'Naše aktivity' },
-    { id: 'all', name: 'Vše' }
+    { id: 'nase-aktivity', name: 'Naše aktivity' }
   ];
 
   useEffect(() => {
