@@ -69,12 +69,12 @@ export function HomeContact() {
         </div>
 
         {/* Nonstop Hotline Button - Mobile only */}
-        <div className="md:hidden mt-6">
+        <div className="md:hidden mt-6 flex justify-center">
           <a
             href="tel:+420775220440"
-            className="flex items-center justify-center gap-3 w-full py-4 bg-accent ring-2 ring-primary text-white font-bold text-lg rounded-lg transition-all shadow-lg hover:scale-105 hover:shadow-xl hover:shadow-accent/40"
+            className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-accent ring-2 ring-primary text-white font-bold text-base rounded-lg transition-all shadow-md hover:scale-105"
           >
-            <Phone className="h-6 w-6" />
+            <Phone className="h-5 w-5" />
             <span>Nonstop hotline</span>
           </a>
         </div>
