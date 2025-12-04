@@ -2,86 +2,126 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { PageHeader } from '../components/PageHeader';
 import { Breadcrumbs } from '../components/Breadcrumbs';
-import { Cookie, Shield, Settings } from 'lucide-react';
+import { Cookie, Shield, TrendingUp, Target, User } from 'lucide-react';
+import { SEO } from '../components/SEO';
 
-export function CookiesPage() {
+function CookiesPage() {
   const { t } = useTranslation();
 
-  const sections = [
-    {
-      icon: <Cookie className="h-8 w-8 text-accent" />,
-      title: t('cookies.sections.what.title'),
-      content: t('cookies.sections.what.content')
-    },
-    {
-      icon: <Shield className="h-8 w-8 text-accent" />,
-      title: t('cookies.sections.types.title'),
-      subsections: [
-        {
-          title: t('cookies.sections.types.necessary.title'),
-          content: t('cookies.sections.types.necessary.content')
-        },
-        {
-          title: t('cookies.sections.types.analytical.title'),
-          content: t('cookies.sections.types.analytical.content')
-        },
-        {
-          title: t('cookies.sections.types.functional.title'),
-          content: t('cookies.sections.types.functional.content')
-        }
-      ]
-    },
-    {
-      icon: <Settings className="h-8 w-8 text-accent" />,
-      title: t('cookies.sections.control.title'),
-      content: t('cookies.sections.control.content')
-    }
-  ];
+  const sectionIcons: { [key: string]: any } = {
+    functional: <Shield className="h-8 w-8 text-accent" />,
+    analytical: <TrendingUp className="h-8 w-8 text-accent" />,
+    marketing: <Target className="h-8 w-8 text-accent" />,
+    personalization: <User className="h-8 w-8 text-accent" />
+  };
+
+  const sections = ['functional', 'analytical', 'marketing', 'personalization'];
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <SEO
+        title={`${t('cookies.title')} | DataHelp.cz`}
+        description="Informace o používání cookies na webových stránkách DataHelp.cz. Zjistěte, jaké cookies používáme a jak spravovat své předvolby."
+        keywords="cookies, soubory cookies, ochrana soukromí, GDPR, webové cookies"
+        canonical="https://datahelp.cz/cookies"
+      />
       <PageHeader
         title={t('cookies.title')}
         subtitle={t('cookies.subtitle')}
-        backgroundImage="cookies-bg.webp"
       />
       <Breadcrumbs />
-      
-      <div className="container mx-auto px-4 py-16">
+
+      <div className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
-          {sections.map((section, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-lg p-8 mb-8">
-              <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0">
-                  {section.icon}
-                </div>
-                <div>
-                  <h2 className="text-2xl font-bold text-primary mb-4">
-                    {section.title}
-                  </h2>
-                  {section.content && (
-                    <p className="text-gray-600 mb-4">{section.content}</p>
-                  )}
-                  {section.subsections && (
-                    <div className="space-y-4">
-                      {section.subsections.map((subsection, idx) => (
-                        <div key={idx}>
-                          <h3 className="text-xl font-semibold text-primary mb-2">
-                            {subsection.title}
-                          </h3>
-                          <p className="text-gray-600">
-                            {subsection.content}
-                          </p>
-                        </div>
-                      ))}
-                    </div>
-                  )}
-                </div>
+
+          {/* Intro Section */}
+          <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <div className="flex items-start space-x-4">
+              <Cookie className="h-8 w-8 text-accent flex-shrink-0 mt-1" />
+              <div>
+                <p className="text-gray-700 leading-relaxed mb-4">
+                  {t('cookies.intro.paragraph1')}
+                </p>
+                <p className="text-gray-700 leading-relaxed">
+                  {t('cookies.intro.paragraph2')}
+                </p>
               </div>
             </div>
-          ))}
+          </div>
+
+          {/* Cookie Sections with Tables */}
+          {sections.map((section) => {
+            const sectionData = t(`cookies.sections.${section}`, { returnObjects: true }) as any;
+            const cookies = sectionData?.cookies || [];
+
+            return (
+              <div key={section} className="bg-white rounded-lg shadow-lg p-8 mb-8">
+                <div className="flex items-start space-x-4 mb-6">
+                  <div className="flex-shrink-0 mt-1">
+                    {sectionIcons[section]}
+                  </div>
+                  <div className="flex-1">
+                    <h2 className="text-2xl font-bold text-primary mb-4">
+                      {sectionData?.title}
+                    </h2>
+                    <p className="text-gray-700 leading-relaxed mb-6">
+                      {sectionData?.description}
+                    </p>
+
+                    {/* Cookie Table */}
+                    {cookies.length > 0 && (
+                      <div className="overflow-x-auto">
+                        <table className="min-w-full border border-gray-200">
+                          <thead className="bg-primary/5">
+                            <tr>
+                              <th className="px-4 py-3 text-left text-sm font-semibold text-primary border-b border-gray-200">
+                                Název
+                              </th>
+                              <th className="px-4 py-3 text-left text-sm font-semibold text-primary border-b border-gray-200">
+                                Zdroj
+                              </th>
+                              {section === 'marketing' && (
+                                <th className="px-4 py-3 text-left text-sm font-semibold text-primary border-b border-gray-200">
+                                  Služba
+                                </th>
+                              )}
+                              <th className="px-4 py-3 text-left text-sm font-semibold text-primary border-b border-gray-200">
+                                Popis
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody className="bg-white">
+                            {cookies.map((cookie: any, index: number) => (
+                              <tr key={index} className="border-b border-gray-200 last:border-b-0">
+                                <td className="px-4 py-3 text-sm text-gray-900 font-mono">
+                                  {cookie.name}
+                                </td>
+                                <td className="px-4 py-3 text-sm text-gray-700">
+                                  {cookie.source}
+                                </td>
+                                {section === 'marketing' && (
+                                  <td className="px-4 py-3 text-sm text-gray-700">
+                                    {cookie.service || '-'}
+                                  </td>
+                                )}
+                                <td className="px-4 py-3 text-sm text-gray-700">
+                                  {cookie.description}
+                                </td>
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>
   );
 }
+
+export default CookiesPage;

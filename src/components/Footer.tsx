@@ -4,9 +4,12 @@ import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { siteConfig } from '../../config/site.config';
 import { StickyCTA } from './StickyCTA';
+import { useCookieConsent } from '../contexts/CookieConsentContext';
 
 export function Footer() {
   const { t } = useTranslation();
+  const { openSettings } = useCookieConsent();
+
   return (
     <footer className="bg-primary text-white py-6 md:py-12 pb-20 md:pb-12 relative">
       <div className="container mx-auto px-4">
@@ -18,6 +21,12 @@ export function Footer() {
               <Link to="/privacy" className="block hover:text-accent transition-colors">{t('footer.privacy')}</Link>
               <Link to="/terms" className="block hover:text-accent transition-colors">{t('footer.terms')}</Link>
               <Link to="/cookies" className="block hover:text-accent transition-colors">{t('footer.cookies')}</Link>
+              <button
+                onClick={openSettings}
+                className="block hover:text-accent transition-colors text-left"
+              >
+                {t('footer.cookieSettings')}
+              </button>
             </div>
           </div>
 

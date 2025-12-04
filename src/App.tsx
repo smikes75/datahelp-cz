@@ -8,6 +8,10 @@ import { SchemaOrg } from './components/SchemaOrg';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { Analytics } from './components/Analytics';
 import { SkipToMain } from './components/SkipToMain';
+import { ToastProvider } from './contexts/ToastContext';
+import { CookieConsentProvider } from './contexts/CookieConsentContext';
+import { CookieConsent } from './components/CookieConsent';
+import { CookieSettings } from './components/CookieSettings';
 
 // Lazy load pages with preloading
 const HomePage = React.lazy(() => import('./pages/HomePage'));
@@ -92,51 +96,58 @@ function App() {
   return (
     <ErrorBoundary>
       <HelmetProvider>
-        <Router>
-          <Analytics />
-          <SchemaOrg />
-          <ScrollToTop />
-          <SkipToMain />
-          <div className="min-h-screen bg-white flex flex-col">
-            <Header />
-            <main id="main-content" className="flex-grow pt-[72px] pb-16 md:pb-0">
-              <ErrorBoundary>
-                <Suspense fallback={<PageLoader />}>
-                  <Routes>
-                    {/* Admin routes */}
-                    <Route path="/admin" element={<AdminPage />} />
-                    <Route path="/admin/login" element={<LoginPage />} />
+        <ToastProvider>
+          <CookieConsentProvider>
+            <Router>
+              <Analytics />
+              <SchemaOrg />
+              <ScrollToTop />
+              <SkipToMain />
+              <div className="min-h-screen bg-white flex flex-col">
+                <Header />
+                <main id="main-content" className="flex-grow pt-[72px] pb-16 md:pb-0">
+                  <ErrorBoundary>
+                    <Suspense fallback={<PageLoader />}>
+                      <Routes>
+                        {/* Admin routes */}
+                        <Route path="/admin" element={<AdminPage />} />
+                        <Route path="/admin/login" element={<LoginPage />} />
 
-                    {/* Main routes */}
-                    <Route path="/" element={<HomePage />} />
-                    <Route path="/services" element={<ServicesPage />} />
-                    <Route path="/services/hdd-recovery" element={<HDDRecoveryPage />} />
-                    <Route path="/services/hdd-recovery/case-studies" element={<HDDCaseStudies />} />
-                    <Route path="/services/ssd-recovery" element={<SSDRecoveryPage />} />
-                    <Route path="/services/ssd-recovery/case-studies" element={<SSDCaseStudies />} />
-                    <Route path="/services/raid-systems" element={<RAIDSystemsPage />} />
-                    <Route path="/services/raid-systems/case-studies" element={<RAIDCaseStudies />} />
-                    <Route path="/services/business-solutions" element={<BusinessSolutionsPage />} />
-                    <Route path="/about" element={<AboutUsPage />} />
-                    <Route path="/technology" element={<TechnologyPage />} />
-                    <Route path="/contact" element={<ContactPage />} />
-                    <Route path="/pricing" element={<PricingPage />} />
-                    <Route path="/price-calculator" element={<PriceCalculatorPage />} />
-                    <Route path="/order-diagnostics" element={<OrderDiagnosticsPage />} />
-                    <Route path="/terms" element={<TermsPage />} />
-                    <Route path="/faq" element={<FAQPage />} />
-                    <Route path="/privacy" element={<PrivacyPage />} />
-                    <Route path="/cookies" element={<CookiesPage />} />
-                    <Route path="/blog" element={<BlogPage />} />
-                    <Route path="/blog/:slug" element={<BlogPostPage />} />
-                    <Route path="*" element={<NotFoundPage />} />
-                  </Routes>
-                </Suspense>
-              </ErrorBoundary>
-            </main>
-            <Footer />
-          </div>
-        </Router>
+                        {/* Main routes */}
+                        <Route path="/" element={<HomePage />} />
+                        <Route path="/services" element={<ServicesPage />} />
+                        <Route path="/services/hdd-recovery" element={<HDDRecoveryPage />} />
+                        <Route path="/services/hdd-recovery/case-studies" element={<HDDCaseStudies />} />
+                        <Route path="/services/ssd-recovery" element={<SSDRecoveryPage />} />
+                        <Route path="/services/ssd-recovery/case-studies" element={<SSDCaseStudies />} />
+                        <Route path="/services/raid-systems" element={<RAIDSystemsPage />} />
+                        <Route path="/services/raid-systems/case-studies" element={<RAIDCaseStudies />} />
+                        <Route path="/services/business-solutions" element={<BusinessSolutionsPage />} />
+                        <Route path="/about" element={<AboutUsPage />} />
+                        <Route path="/technology" element={<TechnologyPage />} />
+                        <Route path="/contact" element={<ContactPage />} />
+                        <Route path="/pricing" element={<PricingPage />} />
+                        <Route path="/price-calculator" element={<PriceCalculatorPage />} />
+                        <Route path="/order-diagnostics" element={<OrderDiagnosticsPage />} />
+                        <Route path="/terms" element={<TermsPage />} />
+                        <Route path="/faq" element={<FAQPage />} />
+                        <Route path="/privacy" element={<PrivacyPage />} />
+                        <Route path="/cookies" element={<CookiesPage />} />
+                        <Route path="/blog" element={<BlogPage />} />
+                        <Route path="/blog/:slug" element={<BlogPostPage />} />
+                        <Route path="*" element={<NotFoundPage />} />
+                      </Routes>
+                    </Suspense>
+                  </ErrorBoundary>
+                </main>
+                <Footer />
+              </div>
+              {/* Cookie Consent Components */}
+              <CookieConsent />
+              <CookieSettings />
+            </Router>
+          </CookieConsentProvider>
+        </ToastProvider>
       </HelmetProvider>
     </ErrorBoundary>
   );

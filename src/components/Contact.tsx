@@ -6,6 +6,7 @@ import { FormButton } from './ui/FormButton';
 import { LoadingSkeleton } from './LoadingSkeleton';
 import { validateEmail, validatePhone, sanitizeInput } from '../utils/security';
 import { supabase } from '../utils/supabaseClient';
+import { useToast } from '../contexts/ToastContext';
 
 const RATE_LIMIT_SECONDS = 60;
 
@@ -18,6 +19,7 @@ interface FormErrors {
 
 export function Contact() {
   const { t } = useTranslation();
+  const toast = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [lastSubmitTime, setLastSubmitTime] = useState(0);
@@ -71,7 +73,7 @@ export function Contact() {
 
     const now = Date.now();
     if (now - lastSubmitTime < RATE_LIMIT_SECONDS * 1000) {
-      alert(t('contact.form.rateLimit', { seconds: RATE_LIMIT_SECONDS }));
+      toast.error(t('contact.form.rateLimit', { seconds: RATE_LIMIT_SECONDS }));
       return;
     }
 
@@ -100,14 +102,14 @@ export function Contact() {
         .insert([sanitizedData]);
 
       if (error) throw error;
-      
+
       setLastSubmitTime(now);
-      alert(t('contact.form.success'));
+      toast.success(t('contact.form.success'));
       form.reset();
       setErrors({});
     } catch (error) {
       console.error('Form submission error:', error);
-      alert(t('contact.form.error'));
+      toast.error(t('contact.form.error'));
     } finally {
       setIsSubmitting(false);
     }

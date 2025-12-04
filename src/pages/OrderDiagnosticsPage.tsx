@@ -6,9 +6,12 @@ import { Breadcrumbs } from '../components/Breadcrumbs';
 import { SEO } from '../components/SEO';
 import { Contact } from '../components/Contact';
 import { supabase } from '../utils/supabaseClient';
+import { useToast } from '../contexts/ToastContext';
 
 function OrderDiagnosticsPage() {
   const { t } = useTranslation();
+  const toast = useToast();
+  const [termsLinkClicked, setTermsLinkClicked] = useState(false);
   const [formData, setFormData] = useState({
     customerType: 'individual' as 'individual' | 'company',
     companyName: '',
@@ -25,8 +28,21 @@ function OrderDiagnosticsPage() {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [agreedToTerms, setAgreedToTerms] = useState(false);
+
+  const handleTermsLinkClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    if (termsLinkClicked) {
+      // Druhé kliknutí - otevřít odkaz
+      window.open('/terms', '_blank');
+      setTermsLinkClicked(false);
+    } else {
+      // První kliknutí - jen označit a pulzovat
+      setTermsLinkClicked(true);
+      // Reset po 3 sekundách
+      setTimeout(() => setTermsLinkClicked(false), 3000);
+    }
+  };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value, type } = e.target;
@@ -64,17 +80,16 @@ function OrderDiagnosticsPage() {
     e.preventDefault();
 
     if (!formData.deliveryMethod) {
-      alert(t('orderDiagnostics.form.errors.deliveryMethod'));
+      toast.error(t('orderDiagnostics.form.errors.deliveryMethod'));
       return;
     }
 
     if (!agreedToTerms) {
-      alert(t('orderDiagnostics.form.errors.terms'));
+      toast.error(t('orderDiagnostics.form.errors.terms'));
       return;
     }
 
     setIsSubmitting(true);
-    setSubmitStatus('idle');
 
     try {
       const { error } = await supabase
@@ -100,7 +115,7 @@ function OrderDiagnosticsPage() {
 
       if (error) throw error;
 
-      setSubmitStatus('success');
+      toast.success(t('orderDiagnostics.form.success'));
       setFormData({
         customerType: 'individual',
         companyName: '',
@@ -118,7 +133,7 @@ function OrderDiagnosticsPage() {
       setAgreedToTerms(false);
     } catch (error) {
       console.error('Error submitting order:', error);
-      setSubmitStatus('error');
+      toast.error(t('orderDiagnostics.form.error'));
     } finally {
       setIsSubmitting(false);
     }
@@ -409,21 +424,20 @@ function OrderDiagnosticsPage() {
 
                         {/* Terms and Submit inside card */}
                         <div className="border-t border-gray-200 pt-6">
-                          <label className="flex items-start mb-6">
+                          <label className="flex items-start mb-6 cursor-pointer">
                             <input
                               type="checkbox"
                               checked={agreedToTerms}
                               onChange={(e) => setAgreedToTerms(e.target.checked)}
-                              className="w-4 h-4 text-primary focus:ring-primary border-gray-300 rounded mt-1 flex-shrink-0"
+                              className="w-6 h-6 text-primary focus:ring-primary border-gray-300 rounded mt-0.5 flex-shrink-0 cursor-pointer"
                               required
                             />
-                            <span className="ml-2 text-gray-700 text-sm">
+                            <span className="ml-3 text-gray-700 text-base">
                               {t('orderDiagnostics.form.terms.text')}{' '}
                               <a
-                                href={`/terms`}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-accent hover:text-accent/80"
+                                href="/terms"
+                                onClick={handleTermsLinkClick}
+                                className={`text-accent hover:text-accent/80 font-semibold underline ${termsLinkClicked ? 'animate-pulse' : ''}`}
                               >
                                 {t('orderDiagnostics.form.terms.link')}
                               </a>
@@ -437,22 +451,6 @@ function OrderDiagnosticsPage() {
                           >
                             {isSubmitting ? t('orderDiagnostics.form.submitting') : t('orderDiagnostics.form.submit')}
                           </button>
-
-                          {submitStatus === 'success' && (
-                            <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg">
-                              <p className="text-green-800 text-center">
-                                {t('orderDiagnostics.form.success')}
-                              </p>
-                            </div>
-                          )}
-
-                          {submitStatus === 'error' && (
-                            <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg">
-                              <p className="text-red-800 text-center">
-                                {t('orderDiagnostics.form.error')}
-                              </p>
-                            </div>
-                          )}
                         </div>
                       </form>
                     </div>
@@ -495,21 +493,20 @@ function OrderDiagnosticsPage() {
 
                         {/* Terms and Submit inside card */}
                         <div className="border-t border-gray-200 pt-6">
-                          <label className="flex items-start mb-6">
+                          <label className="flex items-start mb-6 cursor-pointer">
                             <input
                               type="checkbox"
                               checked={agreedToTerms}
                               onChange={(e) => setAgreedToTerms(e.target.checked)}
-                              className="w-4 h-4 text-primary focus:ring-primary border-gray-300 rounded mt-1 flex-shrink-0"
+                              className="w-6 h-6 text-primary focus:ring-primary border-gray-300 rounded mt-0.5 flex-shrink-0 cursor-pointer"
                               required
                             />
-                            <span className="ml-2 text-gray-700 text-sm">
+                            <span className="ml-3 text-gray-700 text-base">
                               {t('orderDiagnostics.form.terms.text')}{' '}
                               <a
-                                href={`/terms`}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-accent hover:text-accent/80"
+                                href="/terms"
+                                onClick={handleTermsLinkClick}
+                                className={`text-accent hover:text-accent/80 font-semibold underline ${termsLinkClicked ? 'animate-pulse' : ''}`}
                               >
                                 {t('orderDiagnostics.form.terms.link')}
                               </a>
@@ -523,22 +520,6 @@ function OrderDiagnosticsPage() {
                           >
                             {isSubmitting ? t('orderDiagnostics.form.submitting') : t('orderDiagnostics.form.submit')}
                           </button>
-
-                          {submitStatus === 'success' && (
-                            <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg">
-                              <p className="text-green-800 text-center">
-                                {t('orderDiagnostics.form.success')}
-                              </p>
-                            </div>
-                          )}
-
-                          {submitStatus === 'error' && (
-                            <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg">
-                              <p className="text-red-800 text-center">
-                                {t('orderDiagnostics.form.error')}
-                              </p>
-                            </div>
-                          )}
                         </div>
                       </form>
                     </div>
@@ -583,21 +564,20 @@ function OrderDiagnosticsPage() {
 
                         {/* Terms and Submit inside card */}
                         <div className="border-t border-gray-200 pt-6">
-                          <label className="flex items-start mb-6">
+                          <label className="flex items-start mb-6 cursor-pointer">
                             <input
                               type="checkbox"
                               checked={agreedToTerms}
                               onChange={(e) => setAgreedToTerms(e.target.checked)}
-                              className="w-4 h-4 text-primary focus:ring-primary border-gray-300 rounded mt-1 flex-shrink-0"
+                              className="w-6 h-6 text-primary focus:ring-primary border-gray-300 rounded mt-0.5 flex-shrink-0 cursor-pointer"
                               required
                             />
-                            <span className="ml-2 text-gray-700 text-sm">
+                            <span className="ml-3 text-gray-700 text-base">
                               {t('orderDiagnostics.form.terms.text')}{' '}
                               <a
-                                href={`/terms`}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-accent hover:text-accent/80"
+                                href="/terms"
+                                onClick={handleTermsLinkClick}
+                                className={`text-accent hover:text-accent/80 font-semibold underline ${termsLinkClicked ? 'animate-pulse' : ''}`}
                               >
                                 {t('orderDiagnostics.form.terms.link')}
                               </a>
@@ -611,22 +591,6 @@ function OrderDiagnosticsPage() {
                           >
                             {isSubmitting ? t('orderDiagnostics.form.submitting') : t('orderDiagnostics.form.submit')}
                           </button>
-
-                          {submitStatus === 'success' && (
-                            <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg">
-                              <p className="text-green-800 text-center">
-                                {t('orderDiagnostics.form.success')}
-                              </p>
-                            </div>
-                          )}
-
-                          {submitStatus === 'error' && (
-                            <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg">
-                              <p className="text-red-800 text-center">
-                                {t('orderDiagnostics.form.error')}
-                              </p>
-                            </div>
-                          )}
                         </div>
                       </form>
                     </div>

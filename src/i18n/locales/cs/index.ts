@@ -16,6 +16,7 @@ import { footer } from './footer';
 import { privacy } from './privacy';
 import { terms } from './terms';
 import { cookies } from './cookies';
+import { cookieConsent, cookieSettings } from './cookieConsent';
 import { priceCalculator } from './priceCalculator';
 import { orderDiagnostics } from './orderDiagnostics';
 import { blog } from './blog';
@@ -41,6 +42,8 @@ export const cs: Translations = {
   privacy,
   terms,
   cookies,
+  cookieConsent,
+  cookieSettings,
   priceCalculator,
   orderDiagnostics,
   blog,

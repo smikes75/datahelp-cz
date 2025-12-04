@@ -19,7 +19,22 @@
       "Bash(git add:*)",
       "Bash(git commit:*)",
       "Bash(find:*)",
-      "WebFetch(domain:brilliant-narwhal-a23780.netlify.app)"
+      "WebFetch(domain:brilliant-narwhal-a23780.netlify.app)",
+      "WebFetch(domain:www.datahelp.cz)",
+      "Bash(brew upgrade:*)",
+      "Bash(claude --version)",
+      "Bash(env)",
+      "Bash(if [ -f ~/.config/claude/config.json ])",
+      "Bash(then cat ~/.config/claude/config.json)",
+      "Bash(grep:*)",
+      "Bash(else echo 'config not found')",
+      "Bash(fi)",
+      "Bash(if [ -f ~/Library/Application Support/Claude/config.json ])",
+      "Bash(then cat ~/Library/Application Support/Claude/config.json)",
+      "Bash(else echo \"No config.json\")",
+      "Bash(cat:*)",
+      "Bash(npm audit:*)",
+      "Bash(npm test:*)"
     ],
     "deny": [],
     "ask": []

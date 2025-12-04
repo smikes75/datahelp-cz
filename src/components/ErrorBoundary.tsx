@@ -22,6 +22,7 @@ export class ErrorBoundary extends Component<Props, State> {
   }
 
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error('ErrorBoundary caught an error:', error, errorInfo);
     trackError(error, {
       componentStack: errorInfo.componentStack,
       path: window.location.pathname,
@@ -42,6 +43,21 @@ export class ErrorBoundary extends Component<Props, State> {
             <p className="text-gray-600 mb-6">
               We apologize for the inconvenience. Our team has been notified and is working on the issue.
             </p>
+            {import.meta.env.DEV && this.state.error && (
+              <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded text-left">
+                <p className="text-sm font-mono text-red-800 whitespace-pre-wrap break-all">
+                  {this.state.error.message}
+                </p>
+                {this.state.error.stack && (
+                  <details className="mt-2">
+                    <summary className="text-xs text-red-600 cursor-pointer">Stack trace</summary>
+                    <pre className="text-xs text-red-600 mt-2 overflow-auto max-h-40">
+                      {this.state.error.stack}
+                    </pre>
+                  </details>
+                )}
+              </div>
+            )}
             <div className="space-y-4">
               <button
                 onClick={() => window.location.reload()}
