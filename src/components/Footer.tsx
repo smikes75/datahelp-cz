@@ -3,7 +3,6 @@ import { Instagram, Facebook } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { siteConfig } from '../../config/site.config';
-import { StickyCTA } from './StickyCTA';
 import { useCookieConsent } from '../contexts/CookieConsentContext';
 
 export function Footer() {
@@ -11,7 +10,7 @@ export function Footer() {
   const { openSettings } = useCookieConsent();
 
   return (
-    <footer className="bg-primary text-white py-6 md:py-12 pb-20 md:pb-12 relative">
+    <footer className="bg-primary text-white py-6 md:py-12 relative">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-12">
           {/* Column 1 - Legal */}
@@ -107,8 +106,6 @@ export function Footer() {
           </a>
         </div>
 
-        {/* Call Button - Mobile only, positioned at bottom left of footer */}
-        <StickyCTA />
       </div>
     </footer>
   );

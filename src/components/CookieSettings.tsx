@@ -86,43 +86,53 @@ export function CookieSettings() {
                     )}
                   </div>
 
-                  {/* Toggle Switch */}
-                  <div style={{ width: '44px', height: '24px', flexShrink: 0 }}>
-                    <button
-                      type="button"
-                      disabled={category.locked}
-                      onClick={() =>
+                  {/* Toggle Switch - pure inline styles */}
+                  <div
+                    role="switch"
+                    aria-checked={preferences[category.key as keyof typeof preferences]}
+                    tabIndex={category.locked ? -1 : 0}
+                    onClick={() =>
+                      !category.locked && updatePreferences({
+                        [category.key]: !preferences[category.key as keyof typeof preferences],
+                      })
+                    }
+                    onKeyDown={(e) => {
+                      if (!category.locked && (e.key === 'Enter' || e.key === ' ')) {
+                        e.preventDefault();
                         updatePreferences({
                           [category.key]: !preferences[category.key as keyof typeof preferences],
-                        })
+                        });
                       }
-                      style={{ width: '100%', height: '100%' }}
-                      className={`
-                        relative inline-flex cursor-pointer
-                        items-center rounded-full border-2 border-transparent
-                        transition-colors duration-200 ease-in-out
-                        focus:outline-none
-                        ${category.locked
-                          ? 'bg-gray-300 cursor-not-allowed'
-                          : preferences[category.key as keyof typeof preferences]
-                            ? 'bg-primary'
-                            : 'bg-gray-300'
-                        }
-                      `}
-                    >
-                      <span
-                        style={{ width: '20px', height: '20px' }}
-                        className={`
-                          pointer-events-none inline-block
-                          transform rounded-full bg-white shadow ring-0
-                          transition duration-200 ease-in-out
-                          ${preferences[category.key as keyof typeof preferences]
-                            ? 'translate-x-5'
-                            : 'translate-x-0'
-                          }
-                        `}
-                      />
-                    </button>
+                    }}
+                    style={{
+                      width: '44px',
+                      minWidth: '44px',
+                      height: '24px',
+                      borderRadius: '9999px',
+                      backgroundColor: category.locked
+                        ? '#d1d5db'
+                        : preferences[category.key as keyof typeof preferences]
+                          ? '#003366'
+                          : '#d1d5db',
+                      cursor: category.locked ? 'not-allowed' : 'pointer',
+                      position: 'relative',
+                      transition: 'background-color 200ms',
+                      flexShrink: 0,
+                    }}
+                  >
+                    <div
+                      style={{
+                        width: '20px',
+                        height: '20px',
+                        borderRadius: '9999px',
+                        backgroundColor: 'white',
+                        boxShadow: '0 1px 3px rgba(0,0,0,0.3)',
+                        position: 'absolute',
+                        top: '2px',
+                        left: preferences[category.key as keyof typeof preferences] ? '22px' : '2px',
+                        transition: 'left 200ms',
+                      }}
+                    />
                   </div>
                 </div>
                 <p className="text-sm text-gray-600 leading-relaxed">

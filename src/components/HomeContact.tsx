@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { Phone } from 'lucide-react';
 import { Contact } from './Contact';
 import { siteConfig } from '../../config/site.config';
 
@@ -9,7 +10,7 @@ export function HomeContact() {
   const showFormOnMobile = siteConfig.features.showContactFormOnHomepageMobile;
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 pb-8 md:pb-16 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className={`${showMap ? 'max-w-7xl' : 'max-w-2xl'} mx-auto`}>
           <div className={`${showMap ? 'grid md:grid-cols-2 gap-8' : ''}`}>
@@ -65,6 +66,17 @@ export function HomeContact() {
               </div>
             )}
           </div>
+        </div>
+
+        {/* Nonstop Hotline Button - Mobile only */}
+        <div className="md:hidden mt-6">
+          <a
+            href="tel:+420775220440"
+            className="flex items-center justify-center gap-3 w-full py-4 bg-accent ring-2 ring-primary text-white font-bold text-lg rounded-lg transition-all shadow-lg hover:scale-105 hover:shadow-xl hover:shadow-accent/40"
+          >
+            <Phone className="h-6 w-6" />
+            <span>Nonstop hotline</span>
+          </a>
         </div>
       </div>
     </section>

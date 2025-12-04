@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Home, Truck, Package } from 'lucide-react';
+import { Home, Truck, Package, Phone } from 'lucide-react';
 import { PageHeader } from '../components/PageHeader';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { SEO } from '../components/SEO';
@@ -612,6 +612,17 @@ function OrderDiagnosticsPage() {
             </p>
             <Contact />
           </div> */}
+        </div>
+
+        {/* Nonstop Hotline Button - Mobile only */}
+        <div className="md:hidden mt-6">
+          <a
+            href="tel:+420775220440"
+            className="flex items-center justify-center gap-3 w-full py-4 bg-accent ring-2 ring-primary text-white font-bold text-lg rounded-lg transition-all shadow-lg hover:scale-105 hover:shadow-xl hover:shadow-accent/40"
+          >
+            <Phone className="h-6 w-6" />
+            <span>Nonstop hotline</span>
+          </a>
         </div>
       </div>
     </div>

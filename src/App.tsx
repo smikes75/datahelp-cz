@@ -108,7 +108,7 @@ function App() {
               <SkipToMain />
               <div className="min-h-screen bg-white flex flex-col">
                 <Header />
-                <main id="main-content" className="flex-grow pt-[72px] pb-16 md:pb-0">
+                <main id="main-content" className="flex-grow pt-[72px]">
                   <ErrorBoundary>
                     <Suspense fallback={<PageLoader />}>
                       <Routes>
