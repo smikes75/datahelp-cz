@@ -4,8 +4,8 @@
 
 DataHelp.cz je web pro profesionální záchrannou službu dat. Poskytuje informace o službách, ceníky, kalkulátor cen, formuláře pro objednávky a případové studie.
 
-**Live URL**: https://brilliant-narwhal-a23780.netlify.app
-**Doména**: https://datahelp.cz
+**Live URL (Netlify)**: https://datahelp-cz.netlify.app
+**Produkční doména**: https://datahelp.cz
 
 ## Technický stack
 
@@ -319,9 +319,62 @@ npm run lint             # ESLint kontrola
 
 ---
 
-*Poslední aktualizace: 4. prosince 2024 (21:00)*
+*Poslední aktualizace: 5. prosince 2024 (13:30)*
 
 ## Changelog
+
+### 5. prosince 2024 - Session 3 (kategorie Novinky + SEO ochrana)
+
+#### Implementace kategorie "Novinky"
+- ✅ Přidána kategorie "Novinky" do blog filtru (`src/pages/BlogPage.tsx`)
+- ✅ Vytvořen scraper pro krátké textové novinky z `/novinky/slug/` URL
+- ✅ Staženo **57 krátkých novinek** (100-150 znaků, bez obrázků)
+- ✅ Průměrná délka: 124 znaků, reading time: 1-3 min
+- ✅ SQL import vytvořen: `scripts/import-short-news.sql`
+- ✅ Kompletní dokumentace:
+  - `scripts/NOVINKY-README.md` - detailní technická dokumentace
+  - `scripts/NOVINKY-FINAL.md` - finální stav implementace
+- ✅ Novinky **NEMAJÍ obrázky** (image_url = NULL)
+- ✅ **Důležité**: Rozlišeny správné krátké novinky (`/novinky/`) od dlouhých článků (`/clanky/?kategorie=novinky`)
+
+**Struktura novinek:**
+- URL seznam: `/clanky/kategorie/novinky/` (3 stránky)
+- URL detail: `/novinky/{slug}/`
+- Formát: Prostý text (ne markdown)
+- Příklady: "Samsung odhalil rychlé SSD 990 evo", "Pevné disky budou mít za 2 roky až 100 TB"
+
+#### SEO ochrana testovacích webů (Triple Protection)
+- ✅ Implementována **trojitá ochrana** proti indexaci Netlify preview/branch webů
+- ✅ **1. robots.txt redirect**:
+  - Vytvořen `public/robots-staging.txt` s `Disallow: /`
+  - Netlify context (deploy-preview, branch-deploy): `/robots.txt` → `/robots-staging.txt`
+  - Produkce: používá standardní `public/robots.txt`
+- ✅ **2. X-Robots-Tag HTTP header**:
+  - Neprodukční: `X-Robots-Tag: noindex, nofollow`
+  - Produkce: bez headeru (povoleno)
+- ✅ **3. Dynamický robots meta tag**:
+  - Nová komponenta: `src/components/RobotsMetaTag.tsx`
+  - Detekce domény: `datahelp.cz` = index, `*.netlify.app` = noindex
+  - Localhost: povoleno (pro development)
+  - Odstraněn statický tag z `index.html`
+
+**Soubory změněné v této session:**
+- `src/pages/BlogPage.tsx` - přidána kategorie Novinky
+- `scripts/scrape-short-news.cjs` - scraper pro krátké novinky
+- `scripts/import-short-news.sql` - SQL import 57 novinek
+- `scripts/NOVINKY-README.md` - detailní dokumentace
+- `scripts/NOVINKY-FINAL.md` - finální stav a testy
+- `public/robots-staging.txt` - blocking robots.txt
+- `netlify.toml` - conditional headers & redirects
+- `src/components/RobotsMetaTag.tsx` - dynamický robots tag
+- `src/App.tsx` - integrace RobotsMetaTag
+- `index.html` - odebrán statický robots tag
+- `CLAUDE.md` - aktualizována URL (datahelp-cz.netlify.app)
+
+**Testování:**
+- Localhost: http://localhost:5173/blog → filtr "Novinky"
+- Netlify: https://datahelp-cz.netlify.app/robots.txt → blokuje vše
+- Netlify: https://datahelp-cz.netlify.app/blog → 57 novinek
 
 ### 4. prosince 2024 - Session 2 (večer)
 
