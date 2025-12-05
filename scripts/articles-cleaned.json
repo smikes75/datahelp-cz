@@ -1,0 +1,802 @@
+[
+  {
+    "slug": "jak-obnovit-iphone-ze-zalohy",
+    "title": "Jak obnovit iphone ze zálohy?",
+    "excerpt": "Zálohování dat je v dnešní době velmi důležité. Může se vám hodit nejen kvůli případné ztrátě zařízení Apple iPhone, ale také pro obnovení smazaných zpráv, e-mailů nebo kontaktů. ",
+    "category": "První pomoc",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": "2021-08-23",
+    "seoDescription": "Zálohování dat je v dnešní době velmi důležité. Může se vám hodit nejen kvůli případné ztrátě zařízení Apple iPhone, ale také pro obnovení smazaných zpráv, e-mailů nebo kontaktů. "
+  },
+  {
+    "slug": "jak-odblokovat-iphone-navod-krok-za-krokem",
+    "title": "Jak odblokovat iphone? návod krok za krokem",
+    "excerpt": "Zadali jste do svého iPhonu několikrát za sebou nesprávný přístupový kód, a telefon se vám tak zablokoval? Poradíme vám, jak jej zase odblokovat a opět bez problému používat.",
+    "category": "První pomoc",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "Zadali jste do svého iPhonu několikrát za sebou nesprávný přístupový kód, a telefon se vám tak zablokoval? Poradíme vám, jak jej zase odblokovat a opět bez problému používat."
+  },
+  {
+    "slug": "jak-vycistit-mobil-od-prachu",
+    "title": "Jak vyčistit mobil od prachu, virů a bakterií?",
+    "excerpt": "Mobilní telefon dostává v průběhu svého života pořádně zabrat, v důsledku čehož se ve všech portech mobilního zařízení hromadí spousta prachu.",
+    "category": "Zálohování dat a prevence ztráty dat",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": "2021-07-19",
+    "seoDescription": "Mobilní telefon dostává v průběhu svého života pořádně zabrat, v důsledku čehož se ve všech portech mobilního zařízení hromadí spousta prachu."
+  },
+  {
+    "slug": "jak-zalohuji-data-profesionalove",
+    "title": "Jak zálohují data profesionálové ve svém oboru?",
+    "excerpt": "Ptáme se vás – lidí z různých profesí, protože data jsou všude kolem nás. ",
+    "category": "Zálohování dat a prevence ztráty dat",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "Ptáme se vás – lidí z různých profesí, protože data jsou všude kolem nás. "
+  },
+  {
+    "slug": "zachrana-microsd-karty-za-56-tisic-nebo-2-tisice-korun",
+    "title": "Záchrana microsd karty: za 56 tisíc, nebo 2 tisíce korun?",
+    "excerpt": "Rada pro vás. Porovnejte si v klidu nabídnuté ceny za záchranu dat. Ukážeme proč.",
+    "category": "První pomoc",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "Rada pro vás. Porovnejte si v klidu nabídnuté ceny za záchranu dat. Ukážeme proč."
+  },
+  {
+    "slug": "historie-pevnych-disku",
+    "title": "Historie pevných disků: malý průvodce",
+    "excerpt": "První plotnový disk byl vyšší než lednička, vážil půl tuny a dnes by se na něj vešla jedna kvalitní fotografie pořízená mobilním telefonem.",
+    "category": "Technologie",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "První plotnový disk byl vyšší než lednička, vážil půl tuny a dnes by se na něj vešla jedna kvalitní fotografie pořízená mobilním telefonem."
+  },
+  {
+    "slug": "co-je-sindelovy-zapis-neboli-technologie-smr",
+    "title": "Co je šindelový zápis neboli technologie smr?",
+    "excerpt": "„Šindeláky“ jsou v našem oboru zajímavé a aktuální téma. Jde o dokonalou ukázku daně ve smyslu „něco“ za něco“.",
+    "category": "Technologie",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "„Šindeláky“ jsou v našem oboru zajímavé a aktuální téma. Jde o dokonalou ukázku daně ve smyslu „něco“ za něco“."
+  },
+  {
+    "slug": "skodi-pevnemu-disku-vlhkost-vzduchu",
+    "title": "Škodí pevnému disku vlhkost vzduchu?",
+    "excerpt": "Podle seriózních výzkumů může vlhkost ovzduší poškodit jednotku pevného disku (HDD) mnohem více než teplo. Je tomu tak, či není?",
+    "category": "Zálohování dat a prevence ztráty dat",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "Podle seriózních výzkumů může vlhkost ovzduší poškodit jednotku pevného disku (HDD) mnohem více než teplo. Je tomu tak, či není?"
+  },
+  {
+    "slug": "zalohovani-dat-pro-firmy-rady-a-tipy",
+    "title": "Zálohování dat pro firmy? rady a tipy",
+    "excerpt": "Dnes jsme si detailně posvítili na firemní prostředí dat a a řešili jsme populární téma zálohování.",
+    "category": "Zálohování dat a prevence ztráty dat",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "Dnes jsme si detailně posvítili na firemní prostředí dat a a řešili jsme populární téma zálohování."
+  },
+  {
+    "slug": "proc-muze-byt-obnova-dat-z-ssd-slozitejsi-nez-v-pripade-hdd",
+    "title": "Proč může být obnova dat z ssd složitější než v případě hdd?",
+    "excerpt": "4 hlavní argumenty, proč tomu tak může být.",
+    "category": "První pomoc",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "4 hlavní argumenty, proč tomu tak může být."
+  },
+  {
+    "slug": "jak-obnovit-ztracene-kontakty-v-androidu",
+    "title": "Jak obnovit ztracené kontakty v androidu?",
+    "excerpt": "Omylem smazaní kontakt v telefonu? Víme a radíme, jak to co nejrychleji napravit a dostat data zpátky.",
+    "category": "První pomoc",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "Omylem smazaní kontakt v telefonu? Víme a radíme, jak to co nejrychleji napravit a dostat data zpátky."
+  },
+  {
+    "slug": "jak-maximalizovat-zivotnost-ssd",
+    "title": "Jak maximalizovat životnost ssd?",
+    "excerpt": "SSD má řadu výhod, ale nesmrtelnost mezi ně nepatří. Ale známe fígle, které vám mohou pomoci vyždímat z nich to nejlepší.",
+    "category": "Zálohování dat a prevence ztráty dat",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "SSD má řadu výhod, ale nesmrtelnost mezi ně nepatří. Ale známe fígle, které vám mohou pomoci vyždímat z nich to nejlepší."
+  },
+  {
+    "slug": "jak-zjistit-aktualni-stav-vaseho-hdd",
+    "title": "Jak zjistit aktuální stav vašeho hdd?",
+    "excerpt": "Jak stav vašeho HDD monitorovat, jak předcházet problémům a jak je řešit, pokud nastanou?",
+    "category": "Zálohování dat a prevence ztráty dat",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "Jak stav vašeho HDD monitorovat, jak předcházet problémům a jak je řešit, pokud nastanou?"
+  },
+  {
+    "slug": "skodi-hlasity-zvuk-pevnym-diskum",
+    "title": "Škodí hlasitý zvuk pevným diskům?",
+    "excerpt": "Že nadměrný hluk může člověku způsobit újmu, o tom nikdo nepochybuje. Ale že by tohle platilo i u pevných disků? Může je zvuk i třeba nevratně zničit?",
+    "category": "Zálohování dat a prevence ztráty dat",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "Že nadměrný hluk může člověku způsobit újmu, o tom nikdo nepochybuje. Ale že by tohle platilo i u pevných disků? Může je zvuk i třeba nevratně zničit?"
+  },
+  {
+    "slug": "7-snadnych-tipu-jak-nejlepe-zabezpecit-svuj-iphone",
+    "title": "Tipy, jak nejlépe zabezpečit iphone před ztrátou dat",
+    "excerpt": "Pojďme se společně podívat na tipy, jak svůj iPhone opravdu zabezpečit co nejlépe.",
+    "category": "Zálohování dat a prevence ztráty dat",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "Pojďme se společně podívat na tipy, jak svůj iPhone opravdu zabezpečit co nejlépe."
+  },
+  {
+    "slug": "znate-zalohovaci-pravidlo-3-2-1",
+    "title": "Znáte zálohovací pravidlo 3 - 2 – 1?",
+    "excerpt": "Počet lidí, kteří i navzdory zálohování přišli o svá data, je poměrně vysoký. Poradíme vám, jak ztrátě dat co nejlépe předejít.",
+    "category": "Zálohování dat a prevence ztráty dat",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "Počet lidí, kteří i navzdory zálohování přišli o svá data, je poměrně vysoký. Poradíme vám, jak ztrátě dat co nejlépe předejít."
+  },
+  {
+    "slug": "vse-co-jste-chteli-vedet-o-pametove-karte-typu-sd",
+    "title": "Vše, co jste chtěli vědět o paměťově kartě typu sd",
+    "excerpt": "Co tento pojem znamená? Jaké jsou druhy SD karet a na jaká kritéria byste si měli dávat pozor při jejich pořízení? Na všechny otázky si postupně odpovíme.",
+    "category": "Technologie",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "Co tento pojem znamená? Jaké jsou druhy SD karet a na jaká kritéria byste si měli dávat pozor při jejich pořízení? Na všechny otázky si postupně odpovíme."
+  },
+  {
+    "slug": "mobil-krehke-ale-celisti-zadni-kapsy-umi",
+    "title": "Chraňte svůj mobil! i zadní kapsa umí vycenit „zuby“",
+    "excerpt": "Způsoby, kterými si (sami) poškozujeme telefony. Prevence, vědět o nich.",
+    "category": "Zálohování dat a prevence ztráty dat",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "Způsoby, kterými si (sami) poškozujeme telefony. Prevence, vědět o nich."
+  },
+  {
+    "slug": "prisli-jste-o-cenne-fotky-a-videa-z-dovolene-poradime-vam-jak-je-dostat-zpet",
+    "title": "Přišli jste o cenné fotky a videa z dovolené? poradíme vám, jak je dostat zpět!",
+    "excerpt": "Přijít o fotografie či videa rodiny, kamarádů, ze společných akcí nebo cestovatelských výprav je noční můra snad každého z nás. Jak tomu zabránit a co dělat, když se vaše paměťová karta, externí disk, kamera nebo fotoaparát poškodí a data se stanou nedostupnými?",
+    "category": "První pomoc",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "Přijít o fotografie či videa rodiny, kamarádů, ze společných akcí nebo cestovatelských výprav je noční můra snad každého z nás. Jak tomu zabránit a co dělat, když se vaše paměťová karta, externí disk, kamera nebo fotoaparát poškodí a data se stanou nedostupnými?"
+  },
+  {
+    "slug": "jak-poznate-ze-byl-vas-pocitac-napaden-malwarem",
+    "title": "Jak poznáte, že byl váš počítač napaden malwarem?",
+    "excerpt": "Děje se vám něco z 8 podezřelých věcí z článku? No, možná máte v PC nezvanou návštěvu.",
+    "category": "První pomoc",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "Děje se vám něco z 8 podezřelých věcí z článku? No, možná máte v PC nezvanou návštěvu."
+  },
+  {
+    "slug": "-naucili-jsme-se-zachranit-data-z-wd-my-cloud-duo",
+    "title": "Naučili jsme se zachránit data z wd my cloud duo",
+    "excerpt": "Dnes se nám podařilo najít postup, jak poškozené databáze spojit se souborovým systémem.",
+    "category": "Naše aktivity",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "Dnes se nám podařilo najít postup, jak poškozené databáze spojit se souborovým systémem."
+  },
+  {
+    "slug": "technologie-hamr-co-to-je-a-jak-to-funguje",
+    "title": "Technologie hamr: co to je a jak to funguje",
+    "excerpt": "Požadavky na zvyšování dat o úložných kapacitách se nevyhnutelně zvyšují, a proto se technologie neustále vyvíjí.",
+    "category": "Technologie",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "Požadavky na zvyšování dat o úložných kapacitách se nevyhnutelně zvyšují, a proto se technologie neustále vyvíjí."
+  },
+  {
+    "slug": "umela-inteligence-jako-hudba-budoucnosti-zalohovani-dat-ve-21-stoleti",
+    "title": "Umělá inteligence jako hudba budoucnosti zálohování dat ve 21. století",
+    "excerpt": "Jak funguje strojové učení? Správa dat s využitím AI? Samostatné zálohování? Velké otázky zítřejšího světa.",
+    "category": "Zálohování dat a prevence ztráty dat",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": "2019-12-02",
+    "seoDescription": "Jak funguje strojové učení? Správa dat s využitím AI? Samostatné zálohování? Velké otázky zítřejšího světa."
+  },
+  {
+    "slug": "android-10-jake-prinasi-bezpecnostni-zmeny",
+    "title": "Android 10: jaké přináší bezpečnostní změny?",
+    "excerpt": "Bezpečnost uživatele na prvním místě – alfa a omega nového Android 10.",
+    "category": "Zálohování dat a prevence ztráty dat",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": "2019-12-02",
+    "seoDescription": "Bezpečnost uživatele na prvním místě – alfa a omega nového Android 10."
+  },
+  {
+    "slug": "statistiky-chybovosti-pevnych-disku-za-rok-2018",
+    "title": "Statistiky chybovosti pevných disků za rok 2018",
+    "excerpt": "Cloudový poskytovatel Backblaze pravidelně zveřejňuje na svém blogu statistiku chybovosti pevných disků, které sama provozuje.",
+    "category": "Zálohování dat a prevence ztráty dat",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "Cloudový poskytovatel Backblaze pravidelně zveřejňuje na svém blogu statistiku chybovosti pevných disků, které sama provozuje."
+  },
+  {
+    "slug": "jak-poznat-falesna-uloziste-a-softwarove-tipy-pro-jejich-detekci",
+    "title": "Jak poznat falešná úložiště a softwarové tipy pro jejich detekci",
+    "excerpt": "Naši technici (Eda a oba Ondřejové) už mají poměrně bohatou praxi se záchranou dat z fake úložišť. Proto vznikl tento článek.",
+    "category": "Zálohování dat a prevence ztráty dat",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "Naši technici (Eda a oba Ondřejové) už mají poměrně bohatou praxi se záchranou dat z fake úložišť. Proto vznikl tento článek."
+  },
+  {
+    "slug": "ctecky-otisku-prstu-u-mobilu-a-jejich-bezpecnost",
+    "title": "Čtečky otisků prstů u mobilů a jejich bezpečnost",
+    "excerpt": "Z biometrických metod jsou velmi oblíbené čtečky otisků prstů. Odemknutí telefonu dotykem prstu se považuje za vyšší stupeň zabezpečení.",
+    "category": "Zálohování dat a prevence ztráty dat",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "Z biometrických metod jsou velmi oblíbené čtečky otisků prstů. Odemknutí telefonu dotykem prstu se považuje za vyšší stupeň zabezpečení."
+  },
+  {
+    "slug": "studie-o-extrakci-dat-lide-nechavaji-v-pouzitych-pocitacich-a-mobilech-citliva-data",
+    "title": "Studie o extrakci dat: lidé nechávají v použitých počítačích a mobilech citlivá data",
+    "excerpt": "Lidé nechrání dostatečně své soukromé informace. Jak dokazuje nedávný experiment.",
+    "category": "Zálohování dat a prevence ztráty dat",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "Lidé nechrání dostatečně své soukromé informace. Jak dokazuje nedávný experiment."
+  },
+  {
+    "slug": "poskozeny-hdd-do-lednice",
+    "title": "Poškozený hdd nebo ssd do lednice?",
+    "excerpt": "Pevný disk přestane fungovat. Všechny informace a soubory na něm uložené jsou rázem nedostupné. Co uděláte?",
+    "category": "První pomoc",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "Pevný disk přestane fungovat. Všechny informace a soubory na něm uložené jsou rázem nedostupné. Co uděláte?"
+  },
+  {
+    "slug": "studie-od-blancco-android-a-ios-za-1-ctvrtleti-2018",
+    "title": "Studie od blancco: android a ios za 1. čtvrtletí 2018",
+    "excerpt": "Občas člověk narazí na velmi zajímavé údaje. Tak jsme si udělali čas a vyzobali něco do češtiny.",
+    "category": "Zálohování dat a prevence ztráty dat",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "Občas člověk narazí na velmi zajímavé údaje. Tak jsme si udělali čas a vyzobali něco do češtiny."
+  },
+  {
+    "slug": "proc-a-jak-rootovat-android",
+    "title": "Jak rootnout android?",
+    "excerpt": "K čemu je to užitečné a jak ho provést? Praktická využití a možná nebezpečí? Vše se dozvíte v tomto článku.",
+    "category": "Technologie",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "K čemu je to užitečné a jak ho provést? Praktická využití a možná nebezpečí? Vše se dozvíte v tomto článku."
+  },
+  {
+    "slug": "jak-na-zalohu-a-obnovu-dat-ve-windows-7",
+    "title": "Jak na zálohu a obnovu dat ve windows 7",
+    "excerpt": "Umíte si představit, že byste přišli o všechny soubory, které máte uložené na počítači?",
+    "category": "Zálohování dat a prevence ztráty dat",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "Umíte si představit, že byste přišli o všechny soubory, které máte uložené na počítači?"
+  },
+  {
+    "slug": "nebezpeci-levnych-cinskych-smartphonu",
+    "title": "Nebezpečí levných čínských smartphonů?",
+    "excerpt": "Za posledních pár let se mnoho zákazníků také v Česku naučilo vyhledávat čínské značky, které svou cenou jsou až neodolatelně přijatelné.",
+    "category": "Technologie",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "Za posledních pár let se mnoho zákazníků také v Česku naučilo vyhledávat čínské značky, které svou cenou jsou až neodolatelně přijatelné."
+  },
+  {
+    "slug": "zivotnost-usb-flash-disku-na-cem-zavisi-a-co-ji-ovlivnuje",
+    "title": "Životnost usb flash disků – na čem závisí a co ji ovlivňuje?",
+    "excerpt": "To je vždy ožehavé téma - životnost u paměťových médií. Pokusíme se to celé vhodně rozklíčovat v USB problematice, abyste věděli, na co si dávat pozor.",
+    "category": "Zálohování dat a prevence ztráty dat",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "To je vždy ožehavé téma - životnost u paměťových médií. Pokusíme se to celé vhodně rozklíčovat v USB problematice, abyste věděli, na co si dávat pozor."
+  },
+  {
+    "slug": "android-vs-ios-souboj-velikanu-a-podrobne-srovnani",
+    "title": "Android vs. ios – souboj velikánů a podrobné srovnání",
+    "excerpt": "Kdo s koho? Podívali jsme se všemu důkladně na zoubek.",
+    "category": "Technologie",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "Kdo s koho? Podívali jsme se všemu důkladně na zoubek."
+  },
+  {
+    "slug": "jak-jednoduse-chranit-data-v-chytrem-telefonu-i-dil-utoky-zvenku",
+    "title": "Jak jednoduše chránit data v chytrém telefonu: i. díl – útoky zvenku",
+    "excerpt": "Udělejte si chvíli času a projděte si spolu s námi pár základních pokynů, které vám pomohou zabezpečit data na mobilním zařízení.",
+    "category": "Zálohování dat a prevence ztráty dat",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "Udělejte si chvíli času a projděte si spolu s námi pár základních pokynů, které vám pomohou zabezpečit data na mobilním zařízení."
+  },
+  {
+    "slug": "jak-jednoduse-chranit-data-v-chytrem-telefonu-ii-dil-aplikace-a-utoky-zevnitr",
+    "title": "Jak jednoduše chránit data v chytrém telefonu: ii. díl – aplikace a útoky zevnitř",
+    "excerpt": "Čím víc jich máte, tím většímu nebezpečí se vystavujete. Víte, co dělají aplikace za vašimi zády, respektive ve vaší kapse?",
+    "category": "Zálohování dat a prevence ztráty dat",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "Čím víc jich máte, tím většímu nebezpečí se vystavujete. Víte, co dělají aplikace za vašimi zády, respektive ve vaší kapse?"
+  },
+  {
+    "slug": "dark-side-of-the-mobil",
+    "title": "Dark side of the mobil",
+    "excerpt": "Inspirovat se designově např. termostatem z roku 1983? 10 nejpodivnějších telefonů nového tisíciletí.",
+    "category": "Technologie",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "Inspirovat se designově např. termostatem z roku 1983? 10 nejpodivnějších telefonů nového tisíciletí."
+  },
+  {
+    "slug": "co-to-vlastne-je-raid-a-jake-je-jeho-uziti",
+    "title": "Co to vlastně je raid a jaké je jeho užití?",
+    "excerpt": "Sprej na komáry? Tatík slavného bojovníka z Mortal Kombat ? Pořád vedle.",
+    "category": "Technologie",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "Sprej na komáry? Tatík slavného bojovníka z Mortal Kombat ? Pořád vedle."
+  },
+  {
+    "slug": "amazon-cloud-drive-jak-s-nim-pracovat-a-zalohovat-data",
+    "title": "Amazon cloud drive: jak s ním pracovat a zálohovat data",
+    "excerpt": "Od roku 2015 funguje Amazon Drive jako další cloudová platforma. Výhody a nevýhody? Jdeme na to.",
+    "category": "Zálohování dat a prevence ztráty dat",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "Od roku 2015 funguje Amazon Drive jako další cloudová platforma. Výhody a nevýhody? Jdeme na to."
+  },
+  {
+    "slug": "obelstete-datovou-smrtku-naucte-se-odezirat-z-plotny",
+    "title": "Obelstěte datovou smrtku. naučte se odezírat z plotny",
+    "excerpt": "Nejčastější signály, že pevný disk mele z posledního? Hardware a software disku se to nebojí říct naplno.",
+    "category": "Zálohování dat a prevence ztráty dat",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "Nejčastější signály, že pevný disk mele z posledního? Hardware a software disku se to nebojí říct naplno."
+  },
+  {
+    "slug": "kolecko-rotuje-a-hodiny-presypaji-to-me-ale-uz-vazne",
+    "title": "Kolečko rotuje a hodiny přesýpají, to mě ale už vážně…",
+    "excerpt": "Expresivní výrazy tady nepomohou. Za to našich 10 osvědčených rad, jak zrychlit počítač, by mohlo. Přesvědčte se sami.",
+    "category": "První pomoc",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "Expresivní výrazy tady nepomohou. Za to našich 10 osvědčených rad, jak zrychlit počítač, by mohlo. Přesvědčte se sami."
+  },
+  {
+    "slug": "cloudove-uloziste-mega-jak-s-nim-pracovat-a-zalohovat-data",
+    "title": "Cloudové úložiště mega: jak s ním pracovat a zálohovat data",
+    "excerpt": "Víte, že na něm můžete ze začátku využít až 50 GB zdarma pro vaše data? Sepsali jsme průvodce cloudovým úložištěm Mega.",
+    "category": "Zálohování dat a prevence ztráty dat",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "Víte, že na něm můžete ze začátku využít až 50 GB zdarma pro vaše data? Sepsali jsme průvodce cloudovým úložištěm Mega."
+  },
+  {
+    "slug": "cloudove-uloziste-google-disk-jak-s-nim-pracovat-a-zalohovat-data",
+    "title": "Cloudové úložiště google disk: jak s ním pracovat a zálohovat data",
+    "excerpt": "4. díl našeho cloudového průvodce. Tentokrát jsme si blíže posvítili na Google Disk. Co vše umí a neumí? ",
+    "category": "Zálohování dat a prevence ztráty dat",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "4. díl našeho cloudového průvodce. Tentokrát jsme si blíže posvítili na Google Disk. Co vše umí a neumí? "
+  },
+  {
+    "slug": "apple-jak-probiha-zalohovani-dat-na-jednotlivych-zarizenich-a-prace-s-icloud",
+    "title": "Apple: jak probíhá zálohování dat na jednotlivých zařízeních a práce s icloud",
+    "excerpt": "Vše co jste chtěli vědět o zálohování pro platformu Apple na jednom místě. To zní dobře, že? :-)",
+    "category": "Zálohování dat a prevence ztráty dat",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "Vše co jste chtěli vědět o zálohování pro platformu Apple na jednom místě. To zní dobře, že? :-)"
+  },
+  {
+    "slug": "dropbox-jak-s-nim-pracovat-a-zalohovat-data",
+    "title": "Dropbox: jak s ním pracovat a zálohovat data",
+    "excerpt": "V dnešním článku se dozvíte výhody a nevýhody cloudového úložiště Dropbox.",
+    "category": "Zálohování dat a prevence ztráty dat",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "V dnešním článku se dozvíte výhody a nevýhody cloudového úložiště Dropbox."
+  },
+  {
+    "slug": "microsoft-one-drive-jak-s-nim-pracovat-a-zalohovat-data",
+    "title": "Microsoft one drive: jak s ním pracovat a zálohovat data",
+    "excerpt": "V novém díle našeho cloudového průvodce rozebíráme úložiště One Drive.V novém díle našeho cloudového průvodce rozebíráme úložiště One Drive.",
+    "category": "Zálohování dat a prevence ztráty dat",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "V novém díle našeho cloudového průvodce rozebíráme úložiště One Drive.V novém díle našeho cloudového průvodce rozebíráme úložiště One Drive."
+  },
+  {
+    "slug": "vykouzlili-jsme-usmev-na-tvari-maga-rockove-kytary-michala-pavlicka",
+    "title": "Vykouzlili jsme úsměv na tváři mága rockové kytary Michala Pavlíčka",
+    "excerpt": "Zachraňovali jsme data z disků českému šestistrunnému mágovi. A povedlo se!",
+    "category": "Naše aktivity",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "Zachraňovali jsme data z disků českému šestistrunnému mágovi. A povedlo se!"
+  },
+  {
+    "slug": "jak-spravne-nabijet-baterii-telefonu",
+    "title": "Jak správně nabíjet baterii telefonu?",
+    "excerpt": "Vyfotit selfie s ním umí dnes každý, ale správně a efektivně ho nabít? No…",
+    "category": "Technologie",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "Vyfotit selfie s ním umí dnes každý, ale správně a efektivně ho nabít? No…"
+  },
+  {
+    "slug": "jak-vybrat-pevny-disk-do-nas-serveru",
+    "title": "Jak vybrat pevný disk do nas serveru?",
+    "excerpt": "Víte, jaké jsou pravidla pro výběr? Pomůže vám poradit jak na to.",
+    "category": "Technologie",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "Víte, jaké jsou pravidla pro výběr? Pomůže vám poradit jak na to."
+  },
+  {
+    "slug": "co-je-spyware-a-jak-se-mu-nejlepe-branit",
+    "title": "Co je spyware? a jak se mu nejlépe bránit?",
+    "excerpt": "Čtete rádi detektivky? Pak víte, že špehování osoby často přináší velmi užitečné informace.",
+    "category": "První pomoc",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "Čtete rádi detektivky? Pak víte, že špehování osoby často přináší velmi užitečné informace."
+  },
+  {
+    "slug": "jak-jsme-zachranovali-milionove-fotografie-ondreje-pychy",
+    "title": "Jak jsme zachraňovali milionové fotografie Ondřeje Pýchy",
+    "excerpt": "Jedna povedená fotografie má cenu přinejmenším zlata a pokud se porouchá disk se stovky takovými fotografiemi, je zaděláno na pořádnou škodu.",
+    "category": "Naše aktivity",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "Jedna povedená fotografie má cenu přinejmenším zlata a pokud se porouchá disk se stovky takovými fotografiemi, je zaděláno na pořádnou škodu."
+  },
+  {
+    "slug": "koupit-hybridni-sshd-nebo-jen-ssd-disk",
+    "title": "Koupit hybridní sshd, nebo „jen“ ssd disk?",
+    "excerpt": "Pojďme se podívat na to, jaký je rozdíl mezi běžnými SSD a hybridními disky.",
+    "category": "Technologie",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "Pojďme se podívat na to, jaký je rozdíl mezi běžnými SSD a hybridními disky."
+  },
+  {
+    "slug": "sifrovani-dat-na-androidu-ano-nebo-ne",
+    "title": "Šifrování dat na androidu: ano, nebo ne?",
+    "excerpt": "Toť velmi zajímavá otázka. Znáte toho skutečně všechny výhody i nevýhody?",
+    "category": "Zálohování dat a prevence ztráty dat",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "Toť velmi zajímavá otázka. Znáte toho skutečně všechny výhody i nevýhody?"
+  },
+  {
+    "slug": "jak-odstranit-kryptovirus-z-pocitace-a-co-to-vlastne-je",
+    "title": "Jak odstranit kryptovirus z počítače a co to vlastně je?",
+    "excerpt": "Pokud se stanete obětí nebezpečného kryptoviru je potřeba co nejdříve jednat. Ale jak? ",
+    "category": "První pomoc",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "Pokud se stanete obětí nebezpečného kryptoviru je potřeba co nejdříve jednat. Ale jak? "
+  },
+  {
+    "slug": "co-delat-kdyz-ztratite-telefon",
+    "title": "Co dělat, když ztratíte telefon?",
+    "excerpt": "Ztráta či krádež telefonu je velice nepříjemnou záležitostí, a to nejen kvůli ztrátě přístroje jako takového, ale i kvůli ohrožení citlivých dat.",
+    "category": "První pomoc",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "Ztráta či krádež telefonu je velice nepříjemnou záležitostí, a to nejen kvůli ztrátě přístroje jako takového, ale i kvůli ohrožení citlivých dat."
+  },
+  {
+    "slug": "jak-na-zalohu-a-obnovu-dat-ve-windows-10",
+    "title": "Jak na zálohu a obnovu dat ve windows 10",
+    "excerpt": "Prevence je klíčová. Operační systém Windows 10 nabízí hned několik odlišných nástrojů pro zálohu i obnovení.",
+    "category": "První pomoc",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "Prevence je klíčová. Operační systém Windows 10 nabízí hned několik odlišných nástrojů pro zálohu i obnovení."
+  },
+  {
+    "slug": "jak-obnovit-smazane-soubory",
+    "title": "Obnovte si ztracené soubory svépomocí. ale pozor, má to svá rizika",
+    "excerpt": "Smazali jste si v počítači omylem soubor? Nezoufejte, možnosti tu jsou - provedeme vás způsoby obnovení smazaných souborů.",
+    "category": "První pomoc",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "Smazali jste si v počítači omylem soubor? Nezoufejte, možnosti tu jsou - provedeme vás způsoby obnovení smazaných souborů."
+  },
+  {
+    "slug": "jak-predejit-pripadnemu-prepeti-v-siti",
+    "title": "Jak předejít případnému přepětí v síti?",
+    "excerpt": "Jednou z mála věcí, které mohou doslova jako blesk z čistého nebe udeřit do jakékoliv elektroniky ve vaší síti a kompletně ji vyřadit, je přepětí. Stačí jedno malé škobrtnutí a jakékoliv cennosti putují do křemíkového nebe. Jak tomu zabránit?",
+    "category": "Zálohování dat a prevence ztráty dat",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "Jednou z mála věcí, které mohou doslova jako blesk z čistého nebe udeřit do jakékoliv elektroniky ve vaší síti a kompletně ji vyřadit, je přepětí. Stačí jedno malé škobrtnutí a jakékoliv cennosti putují do křemíkového nebe. Jak tomu zabránit?"
+  },
+  {
+    "slug": "odblokovat-mobil-je-hracka-kdyz-teda-znate-spravnou-vterinu",
+    "title": "Odblokovat mobil je hračka, když teda znáte správnou vteřinu",
+    "excerpt": "Ráno se probudíte. Pustíte mobil a zacyklí se vám nešťastně jeho nahrávací proces. Kladivo a špatnou náladu prozatím odložte. I s tímto si dokážeme poradit.",
+    "category": "První pomoc",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "Ráno se probudíte. Pustíte mobil a zacyklí se vám nešťastně jeho nahrávací proces. Kladivo a špatnou náladu prozatím odložte. I s tímto si dokážeme poradit."
+  },
+  {
+    "slug": "co-delat-kdyz-se-iphone-koupal-ve-vode-daji-se-vase-data-zachranit",
+    "title": "Co dělat, když se iphone „koupal“ ve vodě? dají se vaše data zachránit?",
+    "excerpt": "Žbluňknul vám váš drahocenný kapesní miláček do vody? Pak se jistě strachujete nad jeho životem. Resuscitaci člověka byste možná zvládli, ale záchrana mobilního telefonu se na školách neučí. Co tedy dělat?",
+    "category": "První pomoc",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "Žbluňknul vám váš drahocenný kapesní miláček do vody? Pak se jistě strachujete nad jeho životem. Resuscitaci člověka byste možná zvládli, ale záchrana mobilního telefonu se na školách neučí. Co tedy dělat?"
+  },
+  {
+    "slug": "jaky-externi-disk-5-uzitecnych-rad-pro-vyber",
+    "title": "Jaký externí disk? 5 užitečných rad pro výběr",
+    "excerpt": "Některé soubory je potřeba mít neustále při sobě. Ať už se jedná o pracovní dokumenty, filmy ke sledování, fotografie či přenosné programy, je na místě pořízení externího disku. Máme pro vás 5 užitečných rad, které vám pomohou při rozhodování.",
+    "category": "Technologie",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "Některé soubory je potřeba mít neustále při sobě. Ať už se jedná o pracovní dokumenty, filmy ke sledování, fotografie či přenosné programy, je na místě pořízení externího disku. Máme pro vás 5 užitečných rad, které vám pomohou při rozhodování."
+  },
+  {
+    "slug": "5-duvodu-proc-vyuzivat-cloud-pro-efektivni-zalohu-dat",
+    "title": "5 důvodů, proč využívat cloud pro efektivní zálohu dat",
+    "excerpt": "Z anglicismů mají někteří lidé strach. Nicneříkající snůšky písmen nabírají na významu až se zkušenostmi. S nástupem internetu se takových termínů vyrojilo až příliš. Ani cloudu se nemusíte bát, povíme si proč.",
+    "category": "Zálohování dat a prevence ztráty dat",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "Z anglicismů mají někteří lidé strach. Nicneříkající snůšky písmen nabírají na významu až se zkušenostmi. S nástupem internetu se takových termínů vyrojilo až příliš. Ani cloudu se nemusíte bát, povíme si proč."
+  },
+  {
+    "slug": "formatovani-co-to-je-a-k-cemu-se-to-hodi",
+    "title": "Formátování: co to je a k čemu se to hodí",
+    "excerpt": "Slovíčko formátování zřejmě každý běžný uživatel PC buďto zaslechl či zahlédl, ať už od svých známých, z notifikací, varování či v titulcích internetových článků. Pojďme si představit, co se za tímto slovem skrývá.",
+    "category": "Technologie",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "Slovíčko formátování zřejmě každý běžný uživatel PC buďto zaslechl či zahlédl, ať už od svých známých, z notifikací, varování či v titulcích internetových článků. Pojďme si představit, co se za tímto slovem skrývá."
+  },
+  {
+    "slug": "jak-neztratit-data-z-usb-flash-disku",
+    "title": "Jak neztratit data z usb flash disků?",
+    "excerpt": "Ohořelá, rozšlapaná. USB flash paměti můžete dát pěkně na frak, ale ani tehdy není vše ztraceno. Poradíme vám, co s ní nedělat a co jí naopak nevadí.",
+    "category": "Zálohování dat a prevence ztráty dat",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "Ohořelá, rozšlapaná. USB flash paměti můžete dát pěkně na frak, ale ani tehdy není vše ztraceno. Poradíme vám, co s ní nedělat a co jí naopak nevadí."
+  },
+  {
+    "slug": "7-snadnych-tipu-jak-nejlepe-zabezpecit-os-android",
+    "title": "7 snadných tipů, jak nejlépe zabezpečit os android",
+    "excerpt": "Dokud uměly mobilní telefony jenom volat a psát SMSky, bylo starostí daleko méně. S nástupem chytrých telefonů je taková situace už dávnou minulostí, ale mnoho lidí si svůj přístup zanechalo. Opatrnější by si ale měli dávat pozor, jak s nimi zachází. Patříte mezi ně?...",
+    "category": "Zálohování dat a prevence ztráty dat",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "Dokud uměly mobilní telefony jenom volat a psát SMSky, bylo starostí daleko méně. S nástupem chytrých telefonů je taková situace už dávnou minulostí, ale mnoho lidí si svůj přístup zanechalo. Opatrnější by si ale měli dávat pozor, jak s nimi zachází. Patříte mezi ně?..."
+  },
+  {
+    "slug": "jak-jsme-zachranovali-cenna-data-check-czech-fashion",
+    "title": "Jak jsme zachraňovali cenná data check czech fashion",
+    "excerpt": "Představte si, že 6 let píšete články, točíte videa, děláte fotky a vše si poctivě zálohujete na externí disk. Při jedné z rutinních operací s diskem se však něco pokazí a najednou máte o to celé přijít?",
+    "category": "Naše aktivity",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "Představte si, že 6 let píšete články, točíte videa, děláte fotky a vše si poctivě zálohujete na externí disk. Při jedné z rutinních operací s diskem se však něco pokazí a najednou máte o to celé přijít?"
+  },
+  {
+    "slug": "jste-si-jisti-ze-vase-soubory-nepujdou-znovu-na-disku-obnovit",
+    "title": "Jste si jistí, že vaše soubory nepůjdou znovu na disku obnovit?",
+    "excerpt": "Prodávat použité pevné disky přes internet nebo v tištěné inzerci je běžnou záležitostí. Mnozí uživatelé se domnívají, že obyčejné smazání dat stačí k tomu, aby se na ně nemohl podívat nový majitel, bohužel opak je pravdou.",
+    "category": "Zálohování dat a prevence ztráty dat",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "Prodávat použité pevné disky přes internet nebo v tištěné inzerci je běžnou záležitostí. Mnozí uživatelé se domnívají, že obyčejné smazání dat stačí k tomu, aby se na ně nemohl podívat nový majitel, bohužel opak je pravdou."
+  },
+  {
+    "slug": "guru-herniho-prumyslu-v-cr-o-nas-rekl-ze-jsme-skoro-jak-detektivni-kancelar",
+    "title": "Guru herního průmyslu v čr o nás řekl, že jsme skoro jak „detektivní kancelář“!",
+    "excerpt": "Hezky jsme si popovídali s Michalem Rybkou, který vede populární YouTube kanál AlzaTech. Čtěte dále.",
+    "category": "Naše aktivity",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "Hezky jsme si popovídali s Michalem Rybkou, který vede populární YouTube kanál AlzaTech. Čtěte dále."
+  },
+  {
+    "slug": "reverzni-inzenyrstvi-v-praxi-rusove-na-to-jdou-skalpelem-my-sklenenym-vlaknem",
+    "title": "Reverzní inženýrství v praxi: rusové na to jdou skalpelem, my skleněným vláknem",
+    "excerpt": "Správně dešifrovat data a pochopit samotný princip jejich ukládání. Tak jednoduše vypadá definice reverzního inženýrství. Ale to, že se u toho pěkně zapotíme se z ní nedozvíte. Jak to tedy probíhá v praxi?",
+    "category": "Naše aktivity",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "Správně dešifrovat data a pochopit samotný princip jejich ukládání. Tak jednoduše vypadá definice reverzního inženýrství. Ale to, že se u toho pěkně zapotíme se z ní nedozvíte. Jak to tedy probíhá v praxi?"
+  },
+  {
+    "slug": "hvezdy-z-ace-lab-nas-naucily-dalsi-kouzla-pro-zachranu-z-ssd-a-zarizeni-cannon-a-seagate",
+    "title": "Hvězdy z ace lab nás naučily další kouzla pro záchranu z ssd a zařízení cannon a seagate",
+    "excerpt": "Ruská společnost ACE Lab je posledních 10 let považována za lídra v oblasti záchrany dat a působí úspěšně i na americkém trhu. Když uspořádala konferenci v Praze, nemohli jsme chybět.",
+    "category": "Naše aktivity",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "Ruská společnost ACE Lab je posledních 10 let považována za lídra v oblasti záchrany dat a působí úspěšně i na americkém trhu. Když uspořádala konferenci v Praze, nemohli jsme chybět."
+  },
+  {
+    "slug": "ondro-jsi-prvni-cech-ktereho-jsem-ucil-rekl-mi-spickovy-odbornik-z-rusolutu",
+    "title": "„Ondro, jsi první čech, kterého jsem učil,“ řekl mi špičkový odborník z rusolutu",
+    "excerpt": "Páni, řekl jsem si a vzedmula se ve mně vlna hrdosti. Za těch 5 dnů ve Varšavě jsem se naučil mnoho nového. Na moment, kdy jsem se loučil se Sashou Sheremetovem, lídrem světově uznávané společnosti v oblasti záchrany dat, ale dlouho nezapomenu.",
+    "category": "Naše aktivity",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "Páni, řekl jsem si a vzedmula se ve mně vlna hrdosti. Za těch 5 dnů ve Varšavě jsem se naučil mnoho nového. Na moment, kdy jsem se loučil se Sashou Sheremetovem, lídrem světově uznávané společnosti v oblasti záchrany dat, ale dlouho nezapomenu."
+  },
+  {
+    "slug": "smartphony-microsd-karty-ssd-disky-kde-jdou-data-zachranit-kde-ne-a-jaky-je-problem-s-apple",
+    "title": "Smartphony, microsd karty, ssd disky: kde jdou data zachránit, kde ne a jaký je problém s apple?",
+    "excerpt": "Kdo chce držet krok s nejnovějším vývojem na poli záchrany dat, ten rozhodně nesmí usnout na vavřínech a neustále se musí vzdělávat. Chcete vědět, s jakými výzvami v záchraně dat se momentálně v Datahelpu zabýváme? Co zatím nelze pokořit, co už naopak dobře zachraňovat umíme a jak si ...",
+    "category": "Naše aktivity",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "Kdo chce držet krok s nejnovějším vývojem na poli záchrany dat, ten rozhodně nesmí usnout na vavřínech a neustále se musí vzdělávat. Chcete vědět, s jakými výzvami v záchraně dat se momentálně v Datahelpu zabýváme? Co zatím nelze pokořit, co už naopak dobře zachraňovat umíme a jak si ..."
+  },
+  {
+    "slug": "ucastnime-se-odborne-konference-v-praze-od-acelabu",
+    "title": "Účastníme se odborné konference v praze od acelabu!",
+    "excerpt": "Přední ruská firma ACE Group (25 let na trhu) v oblasti záchrany dat pořádá zítra 22. dubna od 10 do 16 v pražském hotelu Clarion Congress unikátní odbornou konferenci s názvem BREAKTHROUGH in Recovering Data from Self-Encrypting Drives and Other Advances in PC-3000, na kterou vysílám...",
+    "category": "Naše aktivity",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "Přední ruská firma ACE Group (25 let na trhu) v oblasti záchrany dat pořádá zítra 22. dubna od 10 do 16 v pražském hotelu Clarion Congress unikátní odbornou konferenci s názvem BREAKTHROUGH in Recovering Data from Self-Encrypting Drives and Other Advances in PC-3000, na kterou vysílám..."
+  },
+  {
+    "slug": "ucastnime-se-tydenniho-skoleni-od-rusolutu-v-polsku",
+    "title": "Účastníme se týdenního školeni od rusolutu v polsku",
+    "excerpt": "Po páteční pražské konferenci se naši technici vydávají na týden do Polska, kde se zúčastní unikátního vzdělávacího semináře od společnosti Rusolut.",
+    "category": "Naše aktivity",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "Po páteční pražské konferenci se naši technici vydávají na týden do Polska, kde se zúčastní unikátního vzdělávacího semináře od společnosti Rusolut."
+  },
+  {
+    "slug": "proc-bude-zachrana-dat-z-ssd-i-hdd-disku-stale-slozitejsi",
+    "title": "Proč bude záchrana dat z ssd i hdd disků stále složitější?",
+    "excerpt": "Pokrok v technologiích záznamových médií SSD i běžných plotnových disků v posledních deseti letech je bezprecedentní. Spolu s ním ale vzrůstá složitost technologií a s ní i náchylnost ke ztrátě dat. Rozebrali jsme hlavní příčiny komplikací při záchraně dat z SSD disků využívající nejnovější technolo...",
+    "category": "Technologie",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "Pokrok v technologiích záznamových médií SSD i běžných plotnových disků v posledních deseti letech je bezprecedentní. Spolu s ním ale vzrůstá složitost technologií a s ní i náchylnost ke ztrátě dat. Rozebrali jsme hlavní příčiny komplikací při záchraně dat z SSD disků využívající nejnovější technolo..."
+  },
+  {
+    "slug": "vite-jak-spravne-zabezpecit-provoz-datoveho-uloziste-nas-ve-vasi-domacnosti",
+    "title": "Víte, jak správně zabezpečit provoz datového úložiště nas ve vaší domácnosti?",
+    "excerpt": "NAS datová úložiště slouží k ukládání a k bezdrátovém přístupu k většímu množství multimediálních dat (např. oblíbená hudba, filmy či fotky z cest). Díky snadné obsluze, pohodlnému centrálnímu ukládání, synchronizaci a sdílení dat s ostatními zařízeni je NAS stále populárnější předevš...",
+    "category": "Zálohování dat a prevence ztráty dat",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "NAS datová úložiště slouží k ukládání a k bezdrátovém přístupu k většímu množství multimediálních dat (např. oblíbená hudba, filmy či fotky z cest). Díky snadné obsluze, pohodlnému centrálnímu ukládání, synchronizaci a sdílení dat s ostatními zařízeni je NAS stále populárnější předevš..."
+  },
+  {
+    "slug": "pozor-na-ssd-disky-sifruji-a-ohrozuji-vase-data",
+    "title": "Pozor na ssd disky. šifrují a ohrožují vaše data!",
+    "excerpt": "Dnešní uživatel může kvůli principu fungování SSD disků prakticky kdykoliv přijít o svá data. Co na to odborníci na záchranu dat a jak velká je hrozba kryptovirů?",
+    "category": "Zálohování dat a prevence ztráty dat",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "Dnešní uživatel může kvůli principu fungování SSD disků prakticky kdykoliv přijít o svá data. Co na to odborníci na záchranu dat a jak velká je hrozba kryptovirů?"
+  },
+  {
+    "slug": "ani-s-raidem-nejste-vzdy-v-bezpeci-datahelp-v-praxi-radi-ceho-se-vyvarovat",
+    "title": "Ani s raidem nejste vždy v bezpečí: datahelp v praxi radí, čeho se vyvarovat",
+    "excerpt": "Disková RAID pole mají svou mohutnější architekturou data uživatelů lépe chránit. Ne vždy se to ale daří, obvykle za problémy stojí lidský faktor. Co a jak dělat, abyste o data v RAID poli nepřišli? Přečtěte si několik příběhů z naší praxe v DataHelp, nad kterými zůstává rozum stát....",
+    "category": "Zálohování dat a prevence ztráty dat",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "Disková RAID pole mají svou mohutnější architekturou data uživatelů lépe chránit. Ne vždy se to ale daří, obvykle za problémy stojí lidský faktor. Co a jak dělat, abyste o data v RAID poli nepřišli? Přečtěte si několik příběhů z naší praxe v DataHelp, nad kterými zůstává rozum stát...."
+  },
+  {
+    "slug": "jako-prvni-v-cr-umime-obnovit-data-z-disku-intel-320-series",
+    "title": "Jako první v ČR umíme obnovit data z disků Intel 320 series",
+    "excerpt": "DataHelp umí jako první specialista v ČR obnovit data z populárních SSD disků Intel 320 series. Jde o SSD disk, který Intel pustil na trh s vážnou výrobní vadou firmware.",
+    "category": "Naše aktivity",
+    "author": "DataHelp Team",
+    "coverImage": "https://www.datahelp.cz/res/crc-1392586153/web/images/1200x630crop/274-1w-d8-dscf9735-1.jpg",
+    "publishedAt": null,
+    "seoDescription": "DataHelp umí jako první specialista v ČR obnovit data z populárních SSD disků Intel 320 series. Jde o SSD disk, který Intel pustil na trh s vážnou výrobní vadou firmware."
+  }
+]

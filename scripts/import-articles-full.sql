@@ -10,7 +10,8 @@ INSERT INTO blog_categories (slug, name_cs, name_en, name_de, name_it) VALUES
   ('prvni-pomoc', 'První pomoc', 'První pomoc', 'První pomoc', 'První pomoc'),
   ('zalohovani-dat', 'Zálohování dat', 'Zálohování dat', 'Zálohování dat', 'Zálohování dat'),
   ('technologie', 'Technologie', 'Technologie', 'Technologie', 'Technologie'),
-  ('nase-aktivity', 'Naše aktivity', 'Naše aktivity', 'Naše aktivity', 'Naše aktivity')
+  ('nase-aktivity', 'Naše aktivity', 'Naše aktivity', 'Naše aktivity', 'Naše aktivity'),
+  ('novinky', 'Novinky', 'Novinky', 'Novinky', 'Novinky')
 ON CONFLICT (slug) DO NOTHING;
 
 -- 2. Vložení článků

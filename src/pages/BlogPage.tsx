@@ -20,7 +20,8 @@ const BlogPage: React.FC = () => {
     { id: 'zalohovani-dat', name: 'Zálohování dat' },
     { id: 'prvni-pomoc', name: 'První pomoc' },
     { id: 'technologie', name: 'Technologie' },
-    { id: 'nase-aktivity', name: 'Naše aktivity' }
+    { id: 'nase-aktivity', name: 'Naše aktivity' },
+    { id: 'novinky', name: 'Novinky' }
   ];
 
   useEffect(() => {
