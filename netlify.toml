@@ -78,13 +78,13 @@
       frame-src 'self' https: *.google.com;
     """
 
-# X-Robots-Tag pro neprodukční prostředí (deploy-preview a branch-deploy)
+# X-Robots-Tag pro všechny Netlify deploye (*.netlify.app domény)
+# Finální produkční doména datahelp.cz nebude mít tento header
+# protože tam budeme používat vlastní DNS, ne Netlify
 [[headers]]
   for = "/*"
   [headers.values]
     X-Robots-Tag = "noindex, nofollow"
-  [headers.conditions]
-    Context = ["deploy-preview", "branch-deploy"]
 
 [[headers]]
   for = "/assets/*"
