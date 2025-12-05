@@ -12,6 +12,7 @@ import { ToastProvider } from './contexts/ToastContext';
 import { CookieConsentProvider } from './contexts/CookieConsentContext';
 import { CookieConsent } from './components/CookieConsent';
 import { CookieSettings } from './components/CookieSettings';
+import { RobotsMetaTag } from './components/RobotsMetaTag';
 
 // Lazy load pages with preloading
 const HomePage = React.lazy(() => import('./pages/HomePage'));
@@ -104,6 +105,7 @@ function App() {
             <Router>
               <Analytics />
               <SchemaOrg />
+              <RobotsMetaTag />
               <ScrollToTop />
               <SkipToMain />
               <div className="min-h-screen bg-white flex flex-col">

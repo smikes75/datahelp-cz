@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /
+
+# Testovací prostředí - blokování indexace
+# Tento soubor je pro Netlify preview a branch deploye

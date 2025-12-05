@@ -2,9 +2,27 @@
   publish = "dist"
   command = "set -x && npm run build"
 
-
 [build.environment]
   NODE_VERSION = "20"
+
+# Produkční context - povolit indexaci
+[context.production.environment]
+  ROBOTS_ALLOW = "true"
+
+# Preview a branch deploye - blokovat indexaci
+[context.deploy-preview.environment]
+  ROBOTS_ALLOW = "false"
+
+[context.branch-deploy.environment]
+  ROBOTS_ALLOW = "false"
+
+# robots.txt redirect pro neprodukční prostředí
+[[redirects]]
+  from = "/robots.txt"
+  to = "/robots-staging.txt"
+  status = 200
+  force = true
+  conditions = {Context = ["deploy-preview", "branch-deploy"]}
 
 # SEO Redirecty - zachování starých URL z magazínu
 [[redirects]]
@@ -59,6 +77,14 @@
       connect-src 'self' https:;
       frame-src 'self' https: *.google.com;
     """
+
+# X-Robots-Tag pro neprodukční prostředí (deploy-preview a branch-deploy)
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+  [headers.conditions]
+    Context = ["deploy-preview", "branch-deploy"]
 
 [[headers]]
   for = "/assets/*"
